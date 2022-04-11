@@ -45,6 +45,7 @@ const Header = () => {
       id: 4,
       label: 'Contact Us',
       href: '/contact-us',
+      isButton: true,
     },
   ];
 
@@ -52,9 +53,9 @@ const Header = () => {
     <Background color="bg-white">
       <Section yPadding="py-6" isHeader>
         <NavbarTwoColumns
-          logo={<Image src={Logo} alt="" height={33} width={164} />}
+          logo={<Image src={Logo} alt="" height={64} width={254} />}
         >
-          {menus.map(({ id, label, href, submenus }: any) => (
+          {menus.map(({ id, label, href, submenus, isButton }: any) => (
             <li key={id}>
               <div className="text-right">
                 {submenus ? (
@@ -65,7 +66,13 @@ const Header = () => {
                   />
                 ) : (
                   <Link href={href} passHref>
-                    <a className="text-lg">{label}</a>
+                    <a
+                      className={`text-lg ${
+                        isButton ? 'bg-primary px-5 py-4 rounded-full' : ''
+                      }`}
+                    >
+                      {label}
+                    </a>
                   </Link>
                 )}
               </div>

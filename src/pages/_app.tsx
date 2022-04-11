@@ -11,7 +11,7 @@ import '@styles/global.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <Provider value={store}>
-    <div className="antialiased text-black bg-background">
+    <div className="antialiased text-black bg-white">
       <Meta title={AppConfig.title} description={AppConfig.description} />
       <Header />
       <Component {...pageProps} />
