@@ -12,7 +12,7 @@ const Spotlight = () => {
 
   return (
     <Section yPadding="py-20">
-      <div className="relative min-h-[720px] flex gap-10">
+      <div className="relative min-h-[720px] flex gap-20">
         <div className="w-1/2">
           <h3 className="text-[32px]">Maximaze your business growth with</h3>
           <h1 className="text-[64px] text-secondary mb-8">Playable Ads</h1>
