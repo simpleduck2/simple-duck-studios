@@ -4,6 +4,7 @@ import {
   Offers,
   Services,
   Spotlight,
+  AdNetwork,
 } from '@components/page/home';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Offers />
       <Services />
       <Spotlight />
+      <AdNetwork />
     </>
   );
 };

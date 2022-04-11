@@ -20,22 +20,7 @@ module.exports = {
       colors: {
         primary: '#FBE54D',
         secondary: '#0083FF',
-        gradient: {
-          primary: {
-            start: '#3D7BFF',
-            end: '#6734FF',
-          },
-          gray: {
-            start: '#F6F7FC',
-            end: '#E8ECF6',
-          },
-        },
         black: '#0D0D10',
-        gray: {
-          text: '#75767FCC',
-          background: '#F6F7FC',
-          divider: '#F2F2F2',
-        },
       },
       lineHeight: {
         hero: '4.5rem',
