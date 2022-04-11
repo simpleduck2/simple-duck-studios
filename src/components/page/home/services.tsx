@@ -2,10 +2,10 @@
 import Tippy from '@tippyjs/react';
 // import 'tippy.js/dist/tippy.css'; // optional
 import 'tippy.js/animations/scale.css';
+import Marquee from 'react-fast-marquee';
 import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
-import { Section } from '@components/layout';
 
 const Services = () => {
   const items = [
@@ -105,24 +105,44 @@ const Services = () => {
     return items.filter((item) => item.row === rowNumber);
   };
 
-  const displayedRows = [1, 2, 3];
+  const rows = [
+    {
+      number: 1,
+      className: {
+        wrapper: 'gap-0',
+        item: 'w-1/3',
+      },
+      speed: 50,
+    },
+    {
+      number: 2,
+      className: {
+        wrapper: 'gap-20',
+        item: 'w-1/4',
+      },
+      speed: 40,
+    },
+    {
+      number: 3,
+      className: {
+        wrapper: 'gap-0',
+        item: 'w-1/4',
+      },
+      speed: 60,
+    },
+  ];
 
   return (
     <Background color="bg-black">
-      <Section>
-        <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-[64px] mb-8">Our Services</h1>
+      {/* <Section> */}
+      <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center text-white">
+        <h1 className="text-[64px] mb-8">Our Services</h1>
 
-          {displayedRows.map((row) => (
-            <div
-              key={row}
-              className={`flex w-full py-12 ${row === 2 ? 'gap-20' : 'gap-0'}`}
-            >
-              {getItemsFromRow(row).map((item: any) => (
-                <div
-                  key={item.id}
-                  className={row === 2 || row === 3 ? 'w-1/4' : 'w-1/3'}
-                >
+        {rows.map((row) => (
+          <Marquee key={row.number} gradient={false} speed={row.speed}>
+            <div className={`flex w-full py-12 ${row.className.wrapper}`}>
+              {getItemsFromRow(row.number).map((item: any) => (
+                <div key={item.id} className={row.className.item}>
                   <Tippy
                     content={
                       <img
@@ -142,9 +162,10 @@ const Services = () => {
                 </div>
               ))}
             </div>
-          ))}
-        </div>
-      </Section>
+          </Marquee>
+        ))}
+      </div>
+      {/* </Section> */}
     </Background>
   );
 };
