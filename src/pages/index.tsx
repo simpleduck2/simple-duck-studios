@@ -1,4 +1,10 @@
-import { Banner, About, Offers, Services } from '@components/page/home';
+import {
+  Banner,
+  About,
+  Offers,
+  Services,
+  Spotlight,
+} from '@components/page/home';
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <About />
       <Offers />
       <Services />
+      <Spotlight />
     </>
   );
 };

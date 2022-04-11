@@ -68,7 +68,7 @@ const Header = () => {
                   <Link href={href} passHref>
                     <a
                       className={`text-lg ${
-                        isButton ? 'bg-primary px-5 py-4 rounded-full' : ''
+                        isButton ? 'bg-primary px-6 py-4 rounded-full' : ''
                       }`}
                     >
                       {label}
