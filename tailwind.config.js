@@ -21,6 +21,7 @@ module.exports = {
         primary: '#FBE54D',
         secondary: '#0083FF',
         black: '#0D0D10',
+        // gray: '#888888',
       },
       lineHeight: {
         hero: '4.5rem',
