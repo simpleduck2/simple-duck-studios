@@ -18,10 +18,10 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
       className={`relative inline-block text-left ${props.className}`}
     >
       <Menu.Button
-        className={`inline-flex gap-3 justify-between w-full text-lg focus:outline-none whitespace-nowrap ${props.textClassName}`}
+        className={`inline-flex gap-3 justify-between w-full text-lg focus:outline-none whitespace-nowrap hover:text-secondary group  ${props.textClassName}`}
       >
         {props.title}
-        <div className="pt-2 text-black">
+        <div className="pt-2 text-black group-hover:text-secondary ">
           <FaChevronDown size={12} />
         </div>
       </Menu.Button>
@@ -42,8 +42,8 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
                   {({ active }) => (
                     <button
                       className={`${
-                        active ? 'text-primary' : 'text-black'
-                      } group flex rounded-md items-center w-full px-4 py-3 text-lg hover:bg-primary/[.05]  `}
+                        active ? 'text-secondary' : 'text-black'
+                      } group flex rounded-md items-center w-full px-4 py-3 text-lg hover:bg-secondary/[.05]  `}
                       onClick={() => props.onChange(item.id)}
                     >
                       {item.label}
