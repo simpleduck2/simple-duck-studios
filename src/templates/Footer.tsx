@@ -4,7 +4,7 @@ import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 import { Background } from '@components/background/Background';
 import { Section } from '@components/layout/Section';
-import LogoBW from '@images/logos/logo-sds-bw.png';
+import LogoBW from '@images/logos/logo-sds-bw.svg';
 
 const Footer = () => {
   const menus = [
