@@ -14,12 +14,14 @@ const NavbarTwoColumns = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center">
     <div>
       <Link href="/">
-        <a className="h-12 lg:h-16 aspect-[254/64] asp block">{props.logo}</a>
+        <a className="h-10 md:h-12 lg:h-16 aspect-[254/64] asp block">
+          {props.logo}
+        </a>
       </Link>
     </div>
 
     <nav>
-      <ul className="navbar hidden lg:flex items-center text-xl gap-5 lg:gap-8">
+      <ul className="navbar hidden md:flex items-center text-xl gap-4 lg:gap-8">
         {props.children}
       </ul>
 
@@ -27,7 +29,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
         title={'Menu'}
         items={menus}
         onChange={(v: any) => console.log(v)}
-        className="block lg:hidden"
+        className="md:hidden"
       />
     </nav>
 
