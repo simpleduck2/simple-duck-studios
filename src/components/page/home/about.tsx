@@ -32,7 +32,7 @@ const About = () => {
               />
               <span className="inline sm:block"> and drive their success</span>
             </h3>
-            <p className="text-xl lg:text-2xl text-primary">
+            <p className="text-lg sm:text-xl lg:text-2xl text-primary">
               Now, it’s your turn...
             </p>
           </div>

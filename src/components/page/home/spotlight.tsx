@@ -32,7 +32,7 @@ const Spotlight = () => {
             {features.map((item, idx) => (
               <li
                 key={idx}
-                className="text-xl lg:text-2xl flex items-start gap-4 mt-4"
+                className="text-lg sm:text-xl lg:text-2xl flex items-start gap-4 mt-4"
               >
                 <BsFillCheckCircleFill
                   color="#26CD7D"
