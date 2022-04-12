@@ -103,7 +103,7 @@ const ContactUs = () => {
                     className={({ active, checked }) =>
                       `${active ? '' : ''}
                 ${checked ? 'bg-secondary text-white' : 'bg-white'}
-                  relative rounded-full px-5 py-2 cursor-pointer flex focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
+                  relative rounded-full px-5 py-2 flex focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
                     }
                   >
                     {({ checked }) => (

@@ -155,7 +155,7 @@ const Services = () => {
                     animation="scale"
                     plugins={[followCursor]}
                   >
-                    <h4 className="text-[32px] inline-block hover:text-primary transition all duration-200 cursor-pointer">
+                    <h4 className="text-[32px] inline-block hover:text-primary transition all duration-200">
                       {item.label}
                     </h4>
                   </Tippy>

@@ -6,3 +6,9 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body, 
+a, a:hover, 
+button, button:hover {
+  cursor: url('https://derrint.sirv.com/Images/simple-duck-studios/home/cursor.png'), auto !important;	
+}
