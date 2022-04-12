@@ -6,12 +6,14 @@ import {
   Spotlight,
   AdNetwork,
   ContactUs,
+  Portfolio,
 } from '@components/page/home';
 
 const Home = () => {
   return (
     <>
       <Banner />
+      <Portfolio />
       <About />
       <Offers />
       <Services />

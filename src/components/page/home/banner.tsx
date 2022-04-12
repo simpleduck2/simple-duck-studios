@@ -61,16 +61,16 @@ const Banner = () => {
 
   return (
     <Background color="bg-white" className="relative">
-      <div className="absolute bottom-16 left-2 flex items-center gap-4 -rotate-90">
+      <div className="absolute bottom-16 left-2 items-center gap-4 -rotate-90 hidden">
         <div>
           <CgArrowLongLeft size={20} />
         </div>
         Scroll
       </div>
 
-      <Section className="h-[calc(100vh-119px)]">
-        <div className="relative h-full flex flex-col justify-center z-[1]">
-          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold">
+      <Section className="">
+        <div className="relative h-full flex flex-col justify-center z-[1] py-6">
+          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-center">
             {text?.first}{' '}
             <Fade left duration={750} cascade when={isTextShown}>
               <span
@@ -80,13 +80,29 @@ const Banner = () => {
               </span>
             </Fade>
           </h1>
-          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8 mb-40">
+          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8 mb-20 text-center">
             {text?.third}
           </h2>
+
           <img
-            src="https://derrint.sirv.com/Images/simple-duck-studios/home/banner-phone.png"
+            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/3d-videos.svg"
             alt=""
-            className="absolute right-0 top-1/2 h-[50vh] -translate-y-1/2 -z-[1] opacity-50 md:opacity-100"
+            className="absolute right-32 top-0 w-[40px] -z-[1] -rotate-[30deg] opacity-50"
+          />
+          <img
+            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/animation.svg"
+            alt=""
+            className="absolute left-0 top-20 w-[50px] -z-[1] -rotate-[30deg] opacity-50"
+          />
+          <img
+            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/playables.svg"
+            alt=""
+            className="absolute right-0 top-40 w-[30px] -z-[1] opacity-50"
+          />
+          <img
+            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/video-ads.svg"
+            alt=""
+            className="absolute left-[45%] top-64 w-[50px] -z-[1] rotate-[15deg] opacity-50"
           />
         </div>
 

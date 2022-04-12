@@ -2,8 +2,8 @@ import { Section } from '@components/layout';
 
 const About = () => {
   return (
-    <Section>
-      <div className="relative lg:min-h-[720px] flex flex-col justify-center">
+    <Section yPadding="py-32">
+      <div className="relative flex flex-col justify-center">
         <div>
           <div className="w-full sm:w-2/3 lg:w-1/2">
             <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3">
