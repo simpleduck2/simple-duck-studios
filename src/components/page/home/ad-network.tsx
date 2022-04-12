@@ -11,9 +11,12 @@ const AdNetwork = () => {
   ];
 
   return (
-    <Background color="bg-gradient-to-b from-white">
+    <Background
+      color="bg-white"
+      className="bg-[url('https://derrint.sirv.com/Images/simple-duck-studios/home/network-bg.svg')] bg-cover"
+    >
       <div className="relative min-h-[360px] flex flex-col justify-center items-center text-center">
-        <h1 className="text-[32px] mb-3">Ad Network</h1>
+        <h1 className="text-[32px] font-bold mb-3">Ad Network</h1>
         <p className="text-lg text-gray-500">
           We support various kind of networks and localizations around the
           globe.
