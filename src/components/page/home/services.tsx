@@ -136,7 +136,7 @@ const Services = () => {
     <Background color="bg-black">
       {/* <Section> */}
       <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-[64px] mb-8">Our Services</h1>
+        <h1 className="text-[64px] font-bold mb-8">Our Services</h1>
 
         {rows.map((row) => (
           <Marquee key={row.number} gradient={false} speed={row.speed}>
