@@ -3,9 +3,9 @@ import { Section } from '@components/layout';
 const About = () => {
   return (
     <Section>
-      <div className="relative min-h-[720px]">
+      <div className="relative lg:min-h-[720px] flex flex-col justify-center">
         <div>
-          <div className="w-1/2">
+          <div className="w-2/3 lg:w-1/2">
             <h3 className="text-[32px] font-bold mb-3">
               Simple Duck is your go-to partner in creative ads
             </h3>
@@ -19,13 +19,13 @@ const About = () => {
         </div>
 
         <div className="flex justify-end mt-20">
-          <div className="w-fit bg-black rounded-full pr-20 py-12 pl-24 rounded-tl-none flex flex-col items-end">
-            <h3 className="text-4xl font-bold text-white mb-5">
+          <div className="w-fit bg-black rounded-full pr-16 lg:pr-20 py-8 lg:py-12 pl-16 lg:pl-24 rounded-tl-none flex flex-col items-end">
+            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-5">
               We&lsquo;ve helped more than 100 campaigns
               <img
                 src="https://derrint.sirv.com/Images/simple-duck-studios/home/underline-yellow.svg"
                 alt="underline"
-                className="absolute right-20 pt-1 w-[260px]"
+                className="absolute right-16 lg:right-20 pt-1 w-[220px] lg:w-[260px]"
               />
               <br />
               and drive their success

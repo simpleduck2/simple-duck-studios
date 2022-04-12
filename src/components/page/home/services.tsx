@@ -140,7 +140,9 @@ const Services = () => {
 
         {rows.map((row) => (
           <Marquee key={row.number} gradient={false} speed={row.speed}>
-            <div className={`flex w-full py-12 ${row.className.wrapper}`}>
+            <div
+              className={`flex w-full py-8 lg:py-12 ${row.className.wrapper}`}
+            >
               {getItemsFromRow(row.number).map((item: any) => (
                 <div key={item.id} className={row.className.item}>
                   <Tippy
@@ -148,14 +150,14 @@ const Services = () => {
                       <img
                         src={`https://picsum.photos/id/${item.id}/300/300`}
                         alt=""
-                        className="w-[240px] h-[240px] max-w-none rounded-full transition all duration-200"
+                        className="w-40 lg:w-60 aspect-square max-w-none rounded-full transition all duration-200"
                       />
                     }
                     followCursor={true}
                     animation="scale"
                     plugins={[followCursor]}
                   >
-                    <h4 className="text-[32px] inline-block hover:text-primary transition all duration-200">
+                    <h4 className="text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
                       {item.label}
                     </h4>
                   </Tippy>

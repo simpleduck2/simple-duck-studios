@@ -13,8 +13,7 @@ type ISectionProps = {
 const Section = (props: ISectionProps) => (
   <div
     className={`max-w-screen-xl mx-auto px-4 sm:px-8 
-    ${props.isHeader || props.isFooter ? '' : 'min-h-[480px] lg:min-h-[720px]'} 
-    ${props.yPadding || 'py-8'} ${props.className || ''}`}
+    ${props.yPadding || 'py-16'} ${props.className || ''}`}
   >
     {(props.title || props.description) && (
       <div className="mb-12 text-center">

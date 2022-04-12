@@ -68,7 +68,7 @@ const Banner = () => {
         Scroll
       </div>
 
-      <Section className="h-[calc(100vh-119px)] !min-h-0">
+      <Section className="h-[calc(100vh-119px)]">
         <div className="relative h-full flex flex-col justify-center z-[1]">
           <h1 className="text-6xl xl:text-8xl font-bold">
             {text?.first}{' '}

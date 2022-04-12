@@ -15,7 +15,7 @@ const ContactUs = () => {
   return (
     <Section yPadding="py-20">
       <div className="relative min-h-[720px] flex gap-20">
-        <div className="w-1/3 px-16">
+        <div className="w-1/3 lg:px-16">
           <h3 className="text-2xl mb-3">Shoot us an e-mail</h3>
           <Link href={'mailto:hi@simpleduckstudios.com'} passHref>
             <a className="text-base">
@@ -39,7 +39,7 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="w-2/3 px-16">
+        <div className="w-2/3 lg:px-8">
           <form action="https://formspree.io/f/mrgjyqgv" method="POST">
             <h2 className="text-2xl text-gray-500">Any inquiries?</h2>
             <h1 className="text-[40px] font-bold mb-4">
@@ -111,7 +111,7 @@ const ContactUs = () => {
                 <RadioGroup.Label className="text-sm font-bold text-gray-700">
                   Project Budget
                 </RadioGroup.Label>
-                <div className="flex flex-col lg:flex-row gap-5 mt-3">
+                <div className="mt-3">
                   {plans.map((plan) => (
                     <RadioGroup.Option
                       key={plan}
@@ -119,7 +119,7 @@ const ContactUs = () => {
                       className={({ active, checked }) =>
                         `${active ? '' : ''}
                   ${checked ? 'bg-secondary text-white' : 'bg-white'}
-                    relative rounded-full px-5 py-2 flex focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
+                    relative rounded-full px-5 py-2 inline-block mr-5 mb-5 focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
                       }
                     >
                       {({ checked }) => (
