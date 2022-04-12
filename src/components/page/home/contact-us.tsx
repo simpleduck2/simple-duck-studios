@@ -3,31 +3,33 @@ import { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import Link from 'next/link';
 import { FaChevronDown } from 'react-icons/fa';
-import { FiInstagram, FiMail, FiTwitter } from 'react-icons/fi';
+import { FiMail } from 'react-icons/fi';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
 
 import { Section } from '@components/layout';
 
 const ContactUs = () => {
-  const plans = ['$5k - $20k', '$20k - $50k', '$50k - $100k', '$100k +'];
+  const plans = ['$500 - $5K', '$5k - $20k', '$20k - $50k', '$50k+'];
 
   const [selected, setSelected] = useState(null as any);
 
   return (
     <Section yPadding="py-10 sm:py-20">
       <div className="relative min-h-[720px] flex flex-col sm:flex-row gap-10 sm:gap-0lg:gap-20">
-        <div className="w-full sm:w-5/12 lg:w-1/3 lg:px-16">
+        <div className="w-full sm:w-5/12 lg:w-1/3 lg:px-8">
           <h3 className="text-lg sm:text-xl lg:text-2xl sm:mb-3">
             Shoot us an e-mail
           </h3>
           <Link href={'mailto:hi@simpleduckstudios.com'} passHref>
             <a className="text-sm lg:text-base">
               <FiMail className="text-secondary inline mr-2 w-[22px]" />
-              <span className="inline break-all">hi@simpleduckstudios.com</span>
+              <span className="inline break-all">
+                sales@simpleduckstudios.com
+              </span>
             </a>
           </Link>
 
-          <h3 className="text-lg sm:text-xl lg:text-2xl sm:mb-3 mt-5 sm:mt-10">
+          {/* <h3 className="text-lg sm:text-xl lg:text-2xl sm:mb-3 mt-5 sm:mt-10">
             Follow our socials
           </h3>
           <div>
@@ -41,7 +43,7 @@ const ContactUs = () => {
                 <FiTwitter className="text-secondary inline mr-2 w-[22px]" />
               </a>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="w-full sm:w-7/12 lg:w-2/3 lg:px-8">
