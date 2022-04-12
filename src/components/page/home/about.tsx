@@ -3,7 +3,7 @@ import { Section } from '@components/layout';
 const About = () => {
   return (
     <Section yPadding="py-32">
-      <div className="relative flex flex-col justify-center">
+      <div className="relative flex flex-col justify-center z-[1]">
         <div>
           <div className="w-full sm:w-2/3 lg:w-1/2">
             <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3">
@@ -37,6 +37,18 @@ const About = () => {
             </p>
           </div>
         </div>
+
+        <img
+          src="https://derrint.sirv.com/Images/simple-duck-studios/home/wave-1.svg"
+          alt=""
+          className="absolute right-32 top-10 w-[80px] -z-[1]"
+        />
+
+        <img
+          src="https://derrint.sirv.com/Images/simple-duck-studios/home/wave-2.svg"
+          alt=""
+          className="absolute bottom-10 left-40 w-[80px] -z-[1]"
+        />
       </div>
     </Section>
   );
