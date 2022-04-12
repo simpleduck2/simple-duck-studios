@@ -9,6 +9,7 @@
 
 body, 
 a, a:hover, 
-button, button:hover {
+button, button:hover,
+label, label:hover {
   cursor: url('https://derrint.sirv.com/Images/simple-duck-studios/home/cursor.png'), auto !important;	
 }
