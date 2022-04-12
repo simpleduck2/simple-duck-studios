@@ -14,9 +14,9 @@ const ContactUs = () => {
   const [selected, setSelected] = useState(null as any);
 
   return (
-    <Section yPadding="py-20">
-      <div className="relative min-h-[720px] flex lg:gap-20">
-        <div className="w-5/12 lg:w-1/3 lg:px-16">
+    <Section yPadding="py-10 sm:py-20">
+      <div className="relative min-h-[720px] flex flex-col sm:flex-row gap-10 sm:gap-0lg:gap-20">
+        <div className="w-full sm:w-5/12 lg:w-1/3 lg:px-16">
           <h3 className="text-xl lg:text-2xl mb-3">Shoot us an e-mail</h3>
           <Link href={'mailto:hi@simpleduckstudios.com'} passHref>
             <a className="text-sm lg:text-base">
@@ -25,7 +25,9 @@ const ContactUs = () => {
             </a>
           </Link>
 
-          <h3 className="text-xl lg:text-2xl mb-3 mt-10">Follow our socials</h3>
+          <h3 className="text-xl lg:text-2xl mb-3 mt-5 sm:mt-10">
+            Follow our socials
+          </h3>
           <div>
             <Link href={'https://instagram.com'} passHref>
               <a className="text-sm lg:text-base">
@@ -40,12 +42,12 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="w-7/12 lg:w-2/3 lg:px-8">
+        <div className="w-full sm:w-7/12 lg:w-2/3 lg:px-8">
           <form action="https://formspree.io/f/mrgjyqgv" method="POST">
-            <h2 className="text-xl lg:text-2xl text-gray-500">
+            <h2 className="text-xl lg:text-2xl text-gray-500 mb-2">
               Any inquiries?
             </h2>
-            <h1 className="text-3xl lg:text-[40px] font-bold mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-bold mb-4">
               Contact us, we’re happy to help!
             </h1>
 
@@ -164,10 +166,10 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="flex mt-10">
+            <div className="flex mt-10 justify-center sm:justify-start">
               <button
                 type="submit"
-                className="text-lg bg-primary px-6 py-4 rounded-full flex items-center gap-2 font-bold"
+                className="lg:text-lg bg-primary px-6 py-4 rounded-full flex items-center gap-2 font-bold"
               >
                 <IoPaperPlaneOutline size={24} />
                 Send

@@ -70,7 +70,7 @@ const Banner = () => {
 
       <Section className="h-[calc(100vh-119px)]">
         <div className="relative h-full flex flex-col justify-center z-[1]">
-          <h1 className="text-6xl xl:text-8xl font-bold">
+          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold">
             {text?.first}{' '}
             <Fade left duration={750} cascade when={isTextShown}>
               <span
@@ -80,13 +80,13 @@ const Banner = () => {
               </span>
             </Fade>
           </h1>
-          <h2 className="text-4xl xl:text-6xl font-bold mt-8 mb-40">
+          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8 mb-40">
             {text?.third}
           </h2>
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/home/banner-phone.png"
             alt=""
-            className="absolute right-0 top-1/2 h-[50vh] -translate-y-1/2 -z-[1]"
+            className="absolute right-0 top-1/2 h-[50vh] -translate-y-1/2 -z-[1] opacity-50 md:opacity-100"
           />
         </div>
 

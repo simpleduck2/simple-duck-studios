@@ -25,7 +25,7 @@ const Header = () => {
                 ) : (
                   <Link href={href} passHref>
                     <a
-                      className={`text-base lg:text-lg hover:text-secondary ${
+                      className={`lg:text-lg hover:text-secondary ${
                         isButton
                           ? 'bg-primary px-4 lg:px-6 py-2 lg:py-4 rounded-full'
                           : ''

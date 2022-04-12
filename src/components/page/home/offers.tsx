@@ -26,8 +26,8 @@ const Offers = () => {
     <Background color="bg-primary" className="overflow-hidden">
       <Section>
         <div className="relative pb-10 lg:min-h-[640px] flex flex-col justify-center items-center text-center gap-1 lg:gap-4">
-          <h3 className="text-2xl">What we offer</h3>
-          <h1 className="text-5xl lg:text-[64px] lg:leading-[64px] font-bold mb-5">
+          <h3 className="text-lg sm:text-2xl">What we offer</h3>
+          <h1 className="text-3xl sm:text-5xl lg:text-[64px] lg:leading-[64px] font-bold mb-5">
             Increase your performance & growth
           </h1>
           <p className="lg:text-lg lg:w-2/3">
@@ -37,12 +37,12 @@ const Offers = () => {
             apps marketing.
           </p>
 
-          <div className="flex w-full gap-8 mt-16 lg:mt-20 z-[1]">
+          <div className="flex flex-col items-center sm:flex-row w-full gap-8 mt-8 sm:mt-16 lg:mt-20 z-[1]">
             {offers.map((item) => (
               <div
                 key={item.id}
-                className={`w-1/3 bg-white rounded-3xl px-10 py-8 rounded-br-none flex flex-col items-center relative ${
-                  item.id === 2 ? 'mt-5 -mb-5' : ''
+                className={`w-2/3 sm:w-1/3 bg-white rounded-3xl px-10 py-8 rounded-br-none flex flex-col items-center relative ${
+                  item.id === 2 ? 'sm:mt-5 sm:-mb-5' : ''
                 }
                 after:content-[''] after:absolute after:-z-[1] after:bottom-0 after:bg-black after:opacity-10 after:-right-[23%] lg:after:-right-[16%] after:h-[70%] after:w-[75%] lg:after:w-[85%] after:skew-x-[315deg]
                 `}

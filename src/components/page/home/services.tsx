@@ -124,13 +124,15 @@ const Services = () => {
     <Background color="bg-black py-16 lg:py-0">
       {/* <Section> */}
       <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-[64px] font-bold mb-8">Our Services</h1>
+        <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
+          Our Services
+        </h1>
 
         {rows.map((row) => (
           <Marquee key={row.number} gradient={false} speed={row.speed}>
             <div className={`flex w-full py-8 lg:py-12 justify-around `}>
               {getItemsFromRow(row.number).map((item: any) => (
-                <div key={item.id}>
+                <div key={item.id} className="mx-8">
                   <Tippy
                     content={
                       <img
@@ -143,7 +145,7 @@ const Services = () => {
                     animation="scale"
                     plugins={[followCursor]}
                   >
-                    <h4 className="text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
+                    <h4 className="text-xl sm:text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
                       {item.label}
                     </h4>
                   </Tippy>
