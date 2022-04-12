@@ -1,4 +1,4 @@
-# Vessel Blockchain Explorer
+# Simple Duck Studios Landing Page
 ### Requirements
 
 - Node.js and npm / yarn
@@ -8,7 +8,7 @@
 Run the following command on your local environment:
 
 ```
-git clone --depth=1 https://github.com/OpenVesselIO/Explorer.git block-explorer-web
+git clone --depth=1 https://github.com/derrint/simple-duck-studios.git block-explorer-web
 cd block-explorer-web
 yarn install
 ```
