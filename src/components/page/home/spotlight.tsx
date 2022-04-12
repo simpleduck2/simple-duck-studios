@@ -12,10 +12,14 @@ const Spotlight = () => {
 
   return (
     <Section yPadding="py-20">
-      <div className="relative min-h-[720px] flex gap-20">
-        <div className="w-1/2">
-          <h3 className="text-[32px]">Maximaze your business growth with</h3>
-          <h1 className="text-[64px] text-secondary mb-8">Playable Ads</h1>
+      <div className="relative flex gap-20">
+        <div className="w-7/12">
+          <h3 className="text-[32px] font-bold">
+            Maximaze your business growth with
+          </h3>
+          <h1 className="text-[64px] font-bold text-secondary mb-8">
+            Playable Ads
+          </h1>
           <p className="text-lg text-gray-500">
             Our speciality, Playable Ads drive revenue and retention through its
             intractivity. Your potential users can experience your mobile game,
@@ -39,30 +43,26 @@ const Spotlight = () => {
           </div>
         </div>
 
-        <div className="w-1/2 flex flex-col gap-10">
+        <div className="w-5/12 flex flex-col gap-10">
           <div>
-            <video
-              src="https://qclay.design/uploads/video-a.mp4"
-              className="shadow-xl rounded-3xl w-full"
-              muted
-              loop
-              autoPlay
-            ></video>
+            <img
+              src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png"
+              className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-3xl w-full"
+              alt=""
+            />
           </div>
           <div className="flex gap-10">
             <div className="w-1/2">
-              <video
-                src="https://qclay.design/uploads/02-code.mp4"
-                className="shadow-xl rounded-3xl w-full"
-                muted
-                loop
-                autoPlay
-              ></video>
+              <img
+                src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png"
+                className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-3xl w-full"
+                alt=""
+              />
             </div>
             <div className="w-1/2">
               <img
-                src="https://qclay.design/images/phones.jpg"
-                className="shadow-xl rounded-3xl w-full"
+                src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png"
+                className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-3xl w-full"
                 alt=""
               />
             </div>
