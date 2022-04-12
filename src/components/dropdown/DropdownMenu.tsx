@@ -43,7 +43,7 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
                     <button
                       className={`${
                         active ? 'text-secondary' : 'text-black'
-                      } group flex rounded-md items-center w-full px-4 py-3 text-lg hover:bg-secondary/[.05]  `}
+                      } group flex rounded-md items-center w-full px-4 py-3 text-lg hover:bg-secondary/[.05] whitespace-nowrap `}
                       onClick={() => props.onChange(item.id)}
                     >
                       {item.label}

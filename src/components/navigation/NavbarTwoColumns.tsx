@@ -2,6 +2,9 @@ import { ReactNode } from 'react';
 
 import Link from 'next/link';
 
+import { DropdownMenu } from '@components/dropdown';
+import { menus } from '@data/index';
+
 type INavbarProps = {
   logo: ReactNode;
   children: ReactNode;
@@ -16,9 +19,16 @@ const NavbarTwoColumns = (props: INavbarProps) => (
     </div>
 
     <nav>
-      <ul className="navbar flex items-center text-xl gap-6 lg:gap-8">
+      <ul className="navbar hidden lg:flex items-center text-xl gap-5 lg:gap-8">
         {props.children}
       </ul>
+
+      <DropdownMenu
+        title={'Menu'}
+        items={menus}
+        onChange={(v: any) => console.log(v)}
+        className="block lg:hidden"
+      />
     </nav>
 
     {/* <style jsx>
