@@ -41,10 +41,15 @@ const ContactUs = () => {
 
         <div className="w-2/3 px-16">
           <h2 className="text-2xl text-gray-500">Any inquiries?</h2>
-          <h1 className="text-[40px] mb-4">Contact us, we’re happy to help!</h1>
+          <h1 className="text-[40px] font-bold mb-4">
+            Contact us, we’re happy to help!
+          </h1>
 
           <div className="w-10/12 mt-6">
-            <label htmlFor="name" className="block text-sm text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-bold text-gray-700"
+            >
               Name & Company
             </label>
             <div className="mt-3 relative rounded-md">
@@ -59,7 +64,10 @@ const ContactUs = () => {
           </div>
 
           <div className="w-10/12 mt-6">
-            <label htmlFor="email" className="block text-sm text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-bold text-gray-700"
+            >
               E-mail
             </label>
             <div className="mt-3 relative rounded-md">
@@ -74,7 +82,10 @@ const ContactUs = () => {
           </div>
 
           <div className="w-10/12 mt-6">
-            <label htmlFor="email" className="block text-sm text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-bold text-gray-700"
+            >
               I’m interested in
             </label>
             <div className="mt-3 relative rounded-md">
@@ -92,7 +103,7 @@ const ContactUs = () => {
 
           <div className="w-10/12 mt-6">
             <RadioGroup value={selected} onChange={setSelected}>
-              <RadioGroup.Label className="text-sm text-gray-700">
+              <RadioGroup.Label className="text-sm font-bold text-gray-700">
                 Project Budget
               </RadioGroup.Label>
               <div className="flex gap-5 mt-3">
@@ -126,7 +137,7 @@ const ContactUs = () => {
           <div className="w-10/12 mt-6">
             <label
               htmlFor="description"
-              className="block text-sm text-gray-700"
+              className="block text-sm font-bold text-gray-700"
             >
               Project Description
             </label>
@@ -142,7 +153,7 @@ const ContactUs = () => {
 
           <div className="flex mt-10">
             <Link href={'/portfolio'} passHref>
-              <a className="text-lg bg-primary px-6 py-4 rounded-full flex items-center gap-2">
+              <a className="text-lg bg-primary px-6 py-4 rounded-full flex items-center gap-2 font-bold">
                 <IoPaperPlaneOutline size={24} />
                 Send
               </a>
