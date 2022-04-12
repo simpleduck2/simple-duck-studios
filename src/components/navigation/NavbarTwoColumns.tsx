@@ -11,12 +11,12 @@ const NavbarTwoColumns = (props: INavbarProps) => (
   <div className="flex flex-wrap justify-between items-center">
     <div>
       <Link href="/">
-        <a>{props.logo}</a>
+        <a className="h-12 lg:h-16 aspect-[254/64] asp block">{props.logo}</a>
       </Link>
     </div>
 
     <nav>
-      <ul className="navbar flex items-center text-xl gap-8">
+      <ul className="navbar flex items-center text-xl gap-6 lg:gap-8">
         {props.children}
       </ul>
     </nav>

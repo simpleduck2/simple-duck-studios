@@ -111,7 +111,7 @@ const ContactUs = () => {
                 <RadioGroup.Label className="text-sm font-bold text-gray-700">
                   Project Budget
                 </RadioGroup.Label>
-                <div className="flex gap-5 mt-3">
+                <div className="flex flex-col lg:flex-row gap-5 mt-3">
                   {plans.map((plan) => (
                     <RadioGroup.Option
                       key={plan}

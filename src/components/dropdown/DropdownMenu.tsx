@@ -18,10 +18,10 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
       className={`relative inline-block text-left ${props.className}`}
     >
       <Menu.Button
-        className={`inline-flex gap-3 justify-between w-full text-lg focus:outline-none whitespace-nowrap hover:text-secondary group  ${props.textClassName}`}
+        className={`inline-flex gap-3 justify-between w-full text-base lg:text-lg focus:outline-none whitespace-nowrap hover:text-secondary group items-center ${props.textClassName}`}
       >
         {props.title}
-        <div className="pt-2 text-black group-hover:text-secondary ">
+        <div className="text-black group-hover:text-secondary ">
           <FaChevronDown size={12} />
         </div>
       </Menu.Button>

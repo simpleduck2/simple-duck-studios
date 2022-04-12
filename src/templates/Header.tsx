@@ -5,7 +5,7 @@ import { Background } from '@components/background';
 import { DropdownMenu } from '@components/dropdown';
 import { Section } from '@components/layout';
 import { NavbarTwoColumns } from '@components/navigation/NavbarTwoColumns';
-import Logo from '@images/logos/logo-sds.png';
+import Logo from '@images/logos/logo-sds.svg';
 
 const Header = () => {
   const menus = [
@@ -52,9 +52,7 @@ const Header = () => {
   return (
     <Background color="bg-white">
       <Section yPadding="py-6" isHeader>
-        <NavbarTwoColumns
-          logo={<Image src={Logo} alt="" height={64} width={254} />}
-        >
+        <NavbarTwoColumns logo={<Image src={Logo} alt="" />}>
           {menus.map(({ id, label, href, submenus, isButton }: any) => (
             <li key={id}>
               <div className="text-right">
@@ -67,8 +65,10 @@ const Header = () => {
                 ) : (
                   <Link href={href} passHref>
                     <a
-                      className={`text-lg hover:text-secondary ${
-                        isButton ? 'bg-primary px-6 py-4 rounded-full' : ''
+                      className={`text-base lg:text-lg hover:text-secondary ${
+                        isButton
+                          ? 'bg-primary px-5 lg:px-6 py-2 lg:py-4 rounded-full'
+                          : ''
                       }`}
                     >
                       {label}

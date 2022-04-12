@@ -25,7 +25,7 @@ const Offers = () => {
   return (
     <Background color="bg-primary">
       <Section>
-        <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center">
+        <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center overflow-hidden">
           <h3 className="text-2xl mb-3">What we offer</h3>
           <h1 className="text-[64px] font-bold mb-3">
             Increase your performance & growth
