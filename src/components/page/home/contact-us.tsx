@@ -61,7 +61,7 @@ const ContactUs = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5]"
+                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] outline-1 outline-black"
                   placeholder="John Doe from Simple Duck"
                   required
                 />
@@ -80,7 +80,7 @@ const ContactUs = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5]"
+                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] outline-1 outline-black"
                   placeholder="john@simpleduckstudios.com"
                   required
                 />
@@ -98,7 +98,7 @@ const ContactUs = () => {
                 <select
                   id="project"
                   name="project"
-                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] appearance-none"
+                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] outline-1 outline-black appearance-none"
                   required
                 >
                   <option value="" disabled selected>
@@ -125,15 +125,15 @@ const ContactUs = () => {
                       value={plan}
                       className={({ active, checked }) =>
                         `${active ? '' : ''}
-                  ${checked ? 'bg-secondary text-white' : 'bg-white'}
-                    relative rounded-full px-5 py-2 inline-block mr-5 mb-5 focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
+                  ${checked ? 'ring-offset-secondary text-secondary' : ''}
+                    bg-white relative rounded-full px-5 py-2 inline-block mr-5 mb-5 focus:outline-none ring-2 ring-offset-2 ring-offset-black ring-white ring-opacity-60`
                       }
                     >
                       {({ checked }) => (
                         <>
                           <div
                             className={` whitespace-nowrap ${
-                              checked ? 'text-white' : 'text-black'
+                              checked ? 'text-secondary' : 'text-black'
                             }`}
                           >
                             {plan}
@@ -158,7 +158,7 @@ const ContactUs = () => {
                 <textarea
                   name="description"
                   id="description"
-                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5]"
+                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] outline-1 outline-black"
                   placeholder="We need help to...."
                 />
               </div>

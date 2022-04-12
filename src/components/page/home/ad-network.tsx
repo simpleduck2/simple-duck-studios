@@ -13,9 +13,9 @@ const AdNetwork = () => {
   return (
     <Background
       color="bg-white"
-      className="bg-[url('https://derrint.sirv.com/Images/simple-duck-studios/home/network-bg.svg')] bg-cover"
+      className="bg-[url('https://derrint.sirv.com/Images/simple-duck-studios/home/network-bg.svg')] bg-cover py-8 lg:py-0"
     >
-      <div className="relative min-h-[360px] flex flex-col justify-center items-center text-center">
+      <div className="relative lg:min-h-[360px] flex flex-col justify-center items-center text-center">
         <h1 className="text-2xl lg:text-[32px] font-bold mb-3">Ad Network</h1>
         <p className="lg:text-lg text-gray-500">
           We support various kind of networks and localizations around the
