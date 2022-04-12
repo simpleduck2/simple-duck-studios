@@ -12,15 +12,15 @@ const Spotlight = () => {
 
   return (
     <Section yPadding="py-20">
-      <div className="relative flex gap-20">
+      <div className="relative flex gap-10 lg:gap-20">
         <div className="w-7/12">
-          <h3 className="text-[32px] font-bold">
+          <h3 className="text-2xl lg:text-[32px] font-bold">
             Maximaze your business growth with
           </h3>
-          <h1 className="text-[64px] font-bold text-secondary mb-8">
+          <h1 className="text-5xl lg:text-[64px] font-bold text-secondary mb-8">
             Playable Ads
           </h1>
-          <p className="text-lg text-gray-500">
+          <p className="lg:text-lg text-gray-500">
             Our speciality, Playable Ads drive revenue and retention through its
             intractivity. Your potential users can experience your mobile game,
             app, brand & product through it. By simply tapping & dragging the ad
@@ -29,14 +29,17 @@ const Spotlight = () => {
           </p>
           <ul className="mt-10">
             {features.map((item, idx) => (
-              <li key={idx} className="text-2xl flex items-center gap-4 mt-4">
+              <li
+                key={idx}
+                className="text-xl lg:text-2xl flex items-center gap-4 mt-4"
+              >
                 <BsFillCheckCircleFill color="#26CD7D" size={14} /> {item}
               </li>
             ))}
           </ul>
           <div className="flex mt-10">
             <Link href={'/portfolio'} passHref>
-              <a className="text-lg bg-primary px-6 py-4 rounded-full">
+              <a className="lg:text-lg bg-primary px-6 py-4 rounded-full">
                 View Portfolio
               </a>
             </Link>

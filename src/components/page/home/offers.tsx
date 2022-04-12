@@ -30,7 +30,7 @@ const Offers = () => {
           <h1 className="text-5xl lg:text-[64px] lg:leading-[64px] font-bold mb-5">
             Increase your performance & growth
           </h1>
-          <p className="text-lg lg:w-2/3">
+          <p className="lg:text-lg lg:w-2/3">
             We produce high quality video ads, static banners and playables to
             reach your target audience and your business growth. We design the
             creative concept with our expertise & knowledge of mobile games &

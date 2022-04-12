@@ -16,8 +16,8 @@ const AdNetwork = () => {
       className="bg-[url('https://derrint.sirv.com/Images/simple-duck-studios/home/network-bg.svg')] bg-cover"
     >
       <div className="relative min-h-[360px] flex flex-col justify-center items-center text-center">
-        <h1 className="text-[32px] font-bold mb-3">Ad Network</h1>
-        <p className="text-lg text-gray-500">
+        <h1 className="text-2xl lg:text-[32px] font-bold mb-3">Ad Network</h1>
+        <p className="lg:text-lg text-gray-500">
           We support various kind of networks and localizations around the
           globe.
         </p>
@@ -28,13 +28,13 @@ const AdNetwork = () => {
               <img
                 src={item}
                 alt=""
-                className="aspect-auto h-[40px] max-w-none"
+                className="aspect-auto h-[30px] lg:h-[40px] max-w-none"
               />
             </div>
           ))}
         </div>
 
-        <p className="text-lg text-gray-500">and more...</p>
+        <p className="lg:text-lg text-gray-500">and more...</p>
       </div>
 
       <style jsx>

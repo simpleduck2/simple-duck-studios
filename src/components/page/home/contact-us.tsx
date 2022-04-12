@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import { RadioGroup } from '@headlessui/react';
 import Link from 'next/link';
+import { FaChevronDown } from 'react-icons/fa';
 import { FiInstagram, FiMail, FiTwitter } from 'react-icons/fi';
 import { IoPaperPlaneOutline } from 'react-icons/io5';
 
@@ -14,39 +15,41 @@ const ContactUs = () => {
 
   return (
     <Section yPadding="py-20">
-      <div className="relative min-h-[720px] flex gap-20">
-        <div className="w-1/3 lg:px-16">
-          <h3 className="text-2xl mb-3">Shoot us an e-mail</h3>
+      <div className="relative min-h-[720px] flex lg:gap-20">
+        <div className="w-5/12 lg:w-1/3 lg:px-16">
+          <h3 className="text-xl lg:text-2xl mb-3">Shoot us an e-mail</h3>
           <Link href={'mailto:hi@simpleduckstudios.com'} passHref>
-            <a className="text-base">
+            <a className="text-sm lg:text-base">
               <FiMail className="text-secondary inline mr-2 w-[22px]" />
-              <span className="inline">hi@simpleduckstudios.com</span>
+              <span className="inline break-all">hi@simpleduckstudios.com</span>
             </a>
           </Link>
 
-          <h3 className="text-2xl mb-3 mt-10">Follow our socials</h3>
+          <h3 className="text-xl lg:text-2xl mb-3 mt-10">Follow our socials</h3>
           <div>
             <Link href={'https://instagram.com'} passHref>
-              <a className="text-base">
+              <a className="text-sm lg:text-base">
                 <FiInstagram className="text-secondary inline mr-2 w-[22px]" />
               </a>
             </Link>
             <Link href={'https://instagram.com'} passHref>
-              <a className="text-base">
+              <a className="text-sm lg:text-base">
                 <FiTwitter className="text-secondary inline mr-2 w-[22px]" />
               </a>
             </Link>
           </div>
         </div>
 
-        <div className="w-2/3 lg:px-8">
+        <div className="w-7/12 lg:w-2/3 lg:px-8">
           <form action="https://formspree.io/f/mrgjyqgv" method="POST">
-            <h2 className="text-2xl text-gray-500">Any inquiries?</h2>
-            <h1 className="text-[40px] font-bold mb-4">
+            <h2 className="text-xl lg:text-2xl text-gray-500">
+              Any inquiries?
+            </h2>
+            <h1 className="text-3xl lg:text-[40px] font-bold mb-4">
               Contact us, we’re happy to help!
             </h1>
 
-            <div className="w-10/12 mt-6">
+            <div className="lg:w-10/12 mt-6">
               <label
                 htmlFor="name"
                 className="block text-sm font-bold text-gray-700"
@@ -65,7 +68,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="w-10/12 mt-6">
+            <div className="lg:w-10/12 mt-6">
               <label
                 htmlFor="email"
                 className="block text-sm font-bold text-gray-700"
@@ -84,7 +87,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="w-10/12 mt-6">
+            <div className="lg:w-10/12 mt-6">
               <label
                 htmlFor="project"
                 className="block text-sm font-bold text-gray-700"
@@ -95,7 +98,7 @@ const ContactUs = () => {
                 <select
                   id="project"
                   name="project"
-                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5]"
+                  className="block w-full px-4 py-3 sm:text-sm rounded-md bg-[#F5F5F5] appearance-none"
                   required
                 >
                   <option value="" disabled selected>
@@ -103,10 +106,14 @@ const ContactUs = () => {
                   </option>
                   <option value="web">Web Based</option>
                 </select>
+                <FaChevronDown
+                  size={12}
+                  className="absolute top-1/2 -translate-y-1/2 right-3"
+                />
               </div>
             </div>
 
-            <div className="w-10/12 mt-6">
+            <div className="lg:w-10/12 mt-6">
               <RadioGroup value={selected} onChange={setSelected}>
                 <RadioGroup.Label className="text-sm font-bold text-gray-700">
                   Project Budget
@@ -140,7 +147,7 @@ const ContactUs = () => {
               <input type="hidden" name="budget" value={selected} />
             </div>
 
-            <div className="w-10/12 mt-6">
+            <div className="lg:w-10/12 mt-6">
               <label
                 htmlFor="description"
                 className="block text-sm font-bold text-gray-700"
