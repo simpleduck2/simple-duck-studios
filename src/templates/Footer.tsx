@@ -34,7 +34,7 @@ const Footer = () => {
     <Background color="bg-white">
       <Section yPadding="py-8" isFooter>
         <div className="flex flex-wrap justify-between items-center">
-          <div className="w-full sm:w-6/12 flex items-center gap-10">
+          <div className="w-full lg:w-6/12 flex items-center gap-10">
             <Image src={LogoBW} alt="" height={48} width={190} />
             <p className="text-sm uppercase">
               Copyright © 2022 Simpleduckstudios
