@@ -108,43 +108,29 @@ const Services = () => {
   const rows = [
     {
       number: 1,
-      className: {
-        wrapper: 'gap-0',
-        item: 'w-1/3',
-      },
       speed: 50,
     },
     {
       number: 2,
-      className: {
-        wrapper: 'gap-20',
-        item: 'w-1/4',
-      },
       speed: 40,
     },
     {
       number: 3,
-      className: {
-        wrapper: 'gap-0',
-        item: 'w-1/4',
-      },
       speed: 60,
     },
   ];
 
   return (
-    <Background color="bg-black">
+    <Background color="bg-black py-16 lg:py-0">
       {/* <Section> */}
-      <div className="relative min-h-[720px] flex flex-col justify-center items-center text-center text-white">
+      <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
         <h1 className="text-[64px] font-bold mb-8">Our Services</h1>
 
         {rows.map((row) => (
           <Marquee key={row.number} gradient={false} speed={row.speed}>
-            <div
-              className={`flex w-full py-8 lg:py-12 ${row.className.wrapper}`}
-            >
+            <div className={`flex w-full py-8 lg:py-12 justify-around `}>
               {getItemsFromRow(row.number).map((item: any) => (
-                <div key={item.id} className={row.className.item}>
+                <div key={item.id}>
                   <Tippy
                     content={
                       <img
