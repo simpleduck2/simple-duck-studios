@@ -28,7 +28,7 @@ const Services = () => {
   ];
 
   return (
-    <Background color="bg-black py-16 lg:py-0">
+    <Background id="services" color="bg-black py-16 lg:py-0">
       {/* <Section> */}
       <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
         <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">

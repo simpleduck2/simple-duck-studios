@@ -49,11 +49,11 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
           className={`absolute z-10 right-0 mx-4 sm:mx-8 mt-2 py-2 origin-top bg-white divide-y divide-gray-100 rounded-xl shadow-lg  focus:outline-none flex min-w-max ${props.classNames?.itemsWrapper}`}
         >
           {props.showPreview && (
-            <div className="flex justify-center items-center px-20">
+            <div className="flex justify-center items-center px-12 lg:px-20">
               <img
                 src={previewImage}
                 alt=""
-                className={`w-32 aspect-square ${
+                className={`w-24 lg:w-32 aspect-square ${
                   previewImage === defaultImage ? 'opacity-25' : ''
                 }`}
               />
@@ -62,7 +62,7 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
           <div
             className={`${
               props.showPreview
-                ? 'grid grid-cols-3 gap-x-6 py-6 pl-0 pr-16'
+                ? 'grid grid-cols-3 lg:gap-x-6 py-6 pl-0 pr-8 lg:pr-16'
                 : ''
             } ${props.classNames?.items}`}
           >
@@ -73,7 +73,7 @@ const DropdownMenu = (props: IDropdownMenuProps) => {
                     <button
                       className={`${
                         active ? 'text-secondary' : 'text-black'
-                      } group flex rounded-md items-center w-full px-4 py-3 text-base lg:text-lg whitespace-nowrap `}
+                      } group flex rounded-md items-center w-full px-4 py-2 lg:py-3 text-base lg:text-lg whitespace-nowrap `}
                       onClick={() => props.onChange(item.id)}
                       onMouseEnter={() => {
                         setPreviewImage(item?.asset?.illustration);
