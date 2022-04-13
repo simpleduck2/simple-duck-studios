@@ -6,7 +6,7 @@ const About = () => {
       <div className="relative flex flex-col justify-center z-[1]">
         <div>
           <div className="w-full sm:w-2/3 lg:w-1/2">
-            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3">
+            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-5">
               Simple Duck is your go-to partner in creative ads
             </h3>
             <p className="lg:text-lg text-gray-500">
@@ -19,7 +19,7 @@ const About = () => {
         </div>
 
         <div className="flex justify-end mt-10 lg:mt-20">
-          <div className="w-fit bg-black rounded-[32px] sm:rounded-[64px] lg:rounded-full rounded-tl-none sm:rounded-tl-none lg:rounded-tl-none px-6 sm:px-16 lg:px-20 py-4 sm:py-8 lg:py-12 flex flex-col items-end">
+          <div className="w-fit bg-black rounded-[32px] sm:rounded-[64px] lg:rounded-full rounded-tl-none sm:rounded-tl-none lg:rounded-tl-none px-6 sm:px-16 lg:px-20 py-4 sm:py-8 lg:py-12 flex flex-col">
             <h3 className="text-xl sm:text-2xl lg:text-4xl font-bold text-white mb-5">
               <span className="block sm:inline">
                 We&lsquo;ve helped more than{' '}
