@@ -1,3 +1,4 @@
 import menus from './menu';
+import services from './services';
 
-export { menus };
+export { menus, services };
