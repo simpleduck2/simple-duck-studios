@@ -29,7 +29,7 @@ const NavbarTwoColumns = (props: INavbarProps) => (
         title={'Menu'}
         items={menus}
         onChange={(v: any) => console.log(v)}
-        className="md:hidden"
+        classNames={{ wrapper: 'md:hidden' }}
       />
     </nav>
 
