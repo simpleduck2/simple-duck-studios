@@ -5,103 +5,11 @@ import Marquee from 'react-fast-marquee';
 import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
+import { services } from '@data/index';
 
 const Services = () => {
-  const items = [
-    {
-      id: 1,
-      label: 'Playables',
-      href: '/services/playables',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 1,
-    },
-    {
-      id: 2,
-      label: 'App Video Ads',
-      href: '/services/app-video-ads',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 1,
-    },
-    {
-      id: 3,
-      label: 'Lyric Video ',
-      href: '/services/lyric-video',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 1,
-    },
-
-    {
-      id: 4,
-      label: 'Animations',
-      href: '/services/animations',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 2,
-    },
-    {
-      id: 5,
-      label: 'Video Ads',
-      href: '/services/video-ads',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 2,
-    },
-    {
-      id: 6,
-      label: '3D Videos',
-      href: '/services/3d-videos',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 2,
-    },
-    {
-      id: 7,
-      label: 'Live Videos',
-      href: '/services/live-videos',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 2,
-    },
-
-    {
-      id: 8,
-      label: 'Rap Ads',
-      href: '/services/rap-ads',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 3,
-    },
-    {
-      id: 9,
-      label: 'Storyboarding',
-      href: '/services/storyboarding',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 3,
-    },
-    {
-      id: 10,
-      label: 'Brand Guidelines',
-      href: '/services/brand-guidelines',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 3,
-    },
-    {
-      id: 11,
-      label: 'Promo GIFs',
-      href: '/services/promo-gifs',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/services-dummy.png',
-      row: 3,
-    },
-  ];
-
   const getItemsFromRow = (rowNumber: number) => {
-    return items.filter((item) => item.row === rowNumber);
+    return services.filter((item) => item.row === rowNumber);
   };
 
   const rows = [
@@ -120,7 +28,7 @@ const Services = () => {
   ];
 
   return (
-    <Background color="bg-black py-16 lg:py-0">
+    <Background id="services" color="bg-black py-16 lg:py-0">
       {/* <Section> */}
       <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
         <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
@@ -135,7 +43,7 @@ const Services = () => {
                   <Tippy
                     content={
                       <img
-                        src={`https://picsum.photos/id/${item.id}/300/300`}
+                        src={item.asset.image}
                         alt=""
                         className="w-40 lg:w-60 aspect-square max-w-none rounded-full transition all duration-200"
                       />

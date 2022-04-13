@@ -8,10 +8,12 @@ type ISectionProps = {
   className?: string;
   isHeader?: boolean;
   isFooter?: boolean;
+  id?: string;
 };
 
 const Section = (props: ISectionProps) => (
   <div
+    id={props.id}
     className={`max-w-screen-xl mx-auto px-4 sm:px-8 
     ${props.yPadding || 'py-16'} ${props.className || ''}`}
   >

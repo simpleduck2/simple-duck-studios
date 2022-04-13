@@ -27,9 +27,9 @@ const NavbarTwoColumns = (props: INavbarProps) => (
 
       <DropdownMenu
         title={'Menu'}
-        items={menus}
+        items={menus.filter((x) => x.isMobile)}
         onChange={(v: any) => console.log(v)}
-        className="md:hidden"
+        classNames={{ wrapper: 'md:hidden' }}
       />
     </nav>
 

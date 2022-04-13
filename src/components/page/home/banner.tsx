@@ -14,12 +14,12 @@ const Banner = () => {
       third: 'for Mobile Gaming and Apps',
       fourth: '',
     },
-    {
-      first: 'We do',
-      second: 'Campaigns',
-      third: 'for Mobile Gaming and Apps',
-      fourth: '',
-    },
+    // {
+    //   first: 'We do',
+    //   second: 'Campaigns',
+    //   third: 'for Mobile Gaming and Apps',
+    //   fourth: '',
+    // },
     {
       first: 'We do',
       second: 'Video Ads',
@@ -60,7 +60,7 @@ const Banner = () => {
   // #endregion
 
   return (
-    <Background color="bg-white" className="relative">
+    <Background color="bg-white" className="relative pt-[112px]">
       <div className="absolute bottom-16 left-2 items-center gap-4 -rotate-90 hidden">
         <div>
           <CgArrowLongLeft size={20} />

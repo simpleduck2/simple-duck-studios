@@ -1,41 +1,35 @@
+import services from './services';
+
 const menus = [
   {
     id: 1,
-    label: 'What We Offer',
-    href: '/offers',
+    label: 'Our Services',
+    href: '',
+    submenus: services,
+    isDesktop: true,
+    isMobile: false,
   },
   {
     id: 2,
     label: 'Our Services',
-    href: '/services',
-    submenus: [
-      {
-        id: 1,
-        label: 'Playables',
-        href: '/services/playables',
-      },
-      {
-        id: 2,
-        label: 'Animations',
-        href: '/services/animations',
-      },
-      {
-        id: 3,
-        label: 'Video Ads',
-        href: '/services/video-ads',
-      },
-    ],
+    href: '#services',
+    isDesktop: false,
+    isMobile: true,
   },
   {
     id: 3,
-    label: 'Ad Network',
-    href: '/network',
+    label: 'About',
+    href: '#about',
+    isDesktop: true,
+    isMobile: true,
   },
   {
     id: 4,
     label: 'Contact Us',
-    href: '/contact-us',
+    href: '#contact',
     isButton: true,
+    isDesktop: true,
+    isMobile: true,
   },
 ];
 

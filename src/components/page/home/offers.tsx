@@ -6,19 +6,19 @@ const Offers = () => {
     {
       id: 1,
       label: 'Engage your audience',
-      image:
+      asset:
         'https://derrint.sirv.com/Images/simple-duck-studios/home/offers-flash.png',
     },
     {
       id: 2,
       label: 'Obtain quality users',
-      image:
+      asset:
         'https://derrint.sirv.com/Images/simple-duck-studios/home/offers-user.png',
     },
     {
       id: 3,
       label: 'Optimize conversion',
-      image:
+      asset:
         'https://derrint.sirv.com/Images/simple-duck-studios/home/offers-tools.png',
     },
   ];
@@ -48,7 +48,7 @@ const Offers = () => {
                 `}
               >
                 <img
-                  src={item.image}
+                  src={item.asset}
                   alt=""
                   className="w-12 lg:w-16 aspect-square max-w-none"
                 />
