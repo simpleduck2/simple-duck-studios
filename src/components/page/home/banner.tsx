@@ -14,12 +14,12 @@ const Banner = () => {
       third: 'for Mobile Gaming and Apps',
       fourth: '',
     },
-    {
-      first: 'We do',
-      second: 'Campaigns',
-      third: 'for Mobile Gaming and Apps',
-      fourth: '',
-    },
+    // {
+    //   first: 'We do',
+    //   second: 'Campaigns',
+    //   third: 'for Mobile Gaming and Apps',
+    //   fourth: '',
+    // },
     {
       first: 'We do',
       second: 'Video Ads',
