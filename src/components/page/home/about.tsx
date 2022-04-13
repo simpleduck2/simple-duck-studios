@@ -2,7 +2,7 @@ import { Section } from '@components/layout';
 
 const About = () => {
   return (
-    <Section yPadding="py-32">
+    <Section yPadding="py-32" id="about">
       <div className="relative flex flex-col justify-center z-[1]">
         <div>
           <div className="w-full sm:w-2/3 lg:w-1/2">

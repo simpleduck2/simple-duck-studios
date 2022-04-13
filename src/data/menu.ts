@@ -1,13 +1,13 @@
 const menus = [
-  {
-    id: 1,
-    label: 'What We Offer',
-    href: '/offers',
-  },
+  // {
+  //   id: 1,
+  //   label: 'What We Offer',
+  //   href: '/offers',
+  // },
   {
     id: 2,
     label: 'Our Services',
-    href: '/services',
+    href: '#services',
     submenus: [
       {
         id: 1,
@@ -28,13 +28,13 @@ const menus = [
   },
   {
     id: 3,
-    label: 'Ad Network',
-    href: '/network',
+    label: 'About',
+    href: '#about',
   },
   {
     id: 4,
     label: 'Contact Us',
-    href: '/contact-us',
+    href: '#contact',
     isButton: true,
   },
 ];

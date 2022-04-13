@@ -14,7 +14,7 @@ const ContactUs = () => {
   const [selected, setSelected] = useState(null as any);
 
   return (
-    <Section yPadding="py-10 sm:py-20">
+    <Section id="contact" yPadding="py-10 sm:py-20">
       <div className="relative min-h-[720px] flex flex-col sm:flex-row gap-10 sm:gap-0lg:gap-20">
         <div className="w-full sm:w-5/12 lg:w-1/3 lg:px-8">
           <h3 className="text-lg sm:text-xl lg:text-2xl sm:mb-3">
