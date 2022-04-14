@@ -124,7 +124,7 @@ const Services = () => {
             )}
 
           {currentService?.asset?.images && (
-            <div className="grid grid-cols-2 gap-10">
+            <div className="grid grid-cols-2 gap-5 lg:gap-10">
               {currentService?.asset?.images.map((image: any, idx: number) => (
                 <img
                   key={idx}
@@ -167,7 +167,7 @@ const Services = () => {
               {shouldUseImage ? (
                 <img src={currentService?.asset?.image} alt="Muted Video" />
               ) : (
-                <div className="flex items-center justify-center w-full gap-10">
+                <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
                   <div
                     className="flex justify-center"
                     ref={videoParentRef}
@@ -185,7 +185,7 @@ const Services = () => {
                         </video>`,
                     }}
                   />
-                  <div className="flex flex-col gap-10">
+                  <div className="flex flex-col gap-5 lg:gap-10">
                     <div
                       className=""
                       ref={videoParentRef}
@@ -232,7 +232,7 @@ const Services = () => {
                 {shouldUseImage ? (
                   <img src={currentService?.asset?.image} alt="Muted Video" />
                 ) : (
-                  <div className="flex items-center justify-center w-full gap-10">
+                  <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
                     {currentService?.asset?.videos.map(
                       (video: any, idx: number) => (
                         <div
