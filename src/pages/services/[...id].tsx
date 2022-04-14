@@ -275,6 +275,39 @@ const Services = () => {
                 )}
               </>
             )}
+
+          {currentService?.asset?.videos && currentService.id === 'playables' && (
+            <>
+              {shouldUseImage ? (
+                <img src={currentService?.asset?.image} alt="Muted Video" />
+              ) : (
+                <div className="grid grid-cols-2 gap-5 lg:gap-10">
+                  {currentService?.asset?.videos.map(
+                    (video: any, idx: number) => (
+                      <div
+                        key={idx}
+                        className="flex justify-center"
+                        ref={videoParentRef}
+                        dangerouslySetInnerHTML={{
+                          __html: `
+                          <video
+                            loop
+                            muted
+                            autoplay
+                            playsinline
+                            preload="metadata"
+                            class="rounded-3xl max-h-[720px]"
+                          >
+                          <source src="${video}" type="video/mp4" />
+                          </video>`,
+                        }}
+                      />
+                    )
+                  )}
+                </div>
+              )}
+            </>
+          )}
         </Section>
       </div>
     </Background>
