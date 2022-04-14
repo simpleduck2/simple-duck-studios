@@ -27,7 +27,7 @@ const AdNetwork = () => {
           globe.
         </p>
 
-        <div className="w-full my-5 sm:my-10 justify-center">
+        <div className="w-full my-5 lg:my-10 justify-center">
           {networks.map((item, idx) => (
             <div key={idx} className="inline-block mx-5 my-3 lg:my-0">
               <img
