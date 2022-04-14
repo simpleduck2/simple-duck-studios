@@ -11,7 +11,7 @@ const Spotlight = () => {
   ];
 
   return (
-    <Section yPadding="py-20">
+    <Section yPadding="py-10 sm:py-20">
       <div className="relative flex flex-col sm:flex-row gap-10 lg:gap-20">
         <div className="w-full sm:w-7/12">
           <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-1 lg:mb-3">

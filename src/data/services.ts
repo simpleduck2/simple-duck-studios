@@ -5,7 +5,14 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/playables.svg',
-      image: 'https://picsum.photos/id/123/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
+      images: [
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png',
+      ],
     },
     href: '/services/playables',
     row: 1,
@@ -16,7 +23,10 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/video-ads.svg',
-      image: 'https://picsum.photos/id/234/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.png',
+      video:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.mp4',
     },
     href: '/services/video-ads',
     row: 2,
@@ -27,7 +37,14 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/storyboarding.svg',
-      image: 'https://picsum.photos/id/345/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding.png',
+      images: [
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-1.jpg',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-2.jpg',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-6.jpg',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-7.jpg',
+      ],
     },
     href: '/services/storyboarding',
     row: 3,
@@ -38,7 +55,10 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/app-video-ads.svg',
-      image: 'https://picsum.photos/id/456/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/app-video-ads.png',
+      video:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/app-video-ads.mp4',
     },
     href: '/services/app-video-ads',
     row: 1,
@@ -49,18 +69,22 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/3d-videos.svg',
-      image: 'https://picsum.photos/id/567/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/3d-videos.png',
+      video:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/3d-videos.mp4',
     },
     href: '/services/3d-videos',
     row: 2,
   },
   {
     id: 'brand-guidelines',
-    label: 'Brand guidelines',
+    label: 'Brand Guidelines',
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/brand-guidelines.svg',
-      image: 'https://picsum.photos/id/678/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/brand-guidelines.png',
     },
     href: '/services/brand-guidelines',
     row: 3,
@@ -71,7 +95,10 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/lyric-video.svg',
-      image: 'https://picsum.photos/id/789/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/lyric-video.png',
+      video:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/lyric-video.mp4',
     },
     href: '/services/lyric-video',
     row: 1,
@@ -82,7 +109,12 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/live-videos.svg',
-      image: 'https://picsum.photos/id/891/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/live-videos.png',
+      videos: [
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/live-videos-1.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/live-videos-2.mp4',
+      ],
     },
     href: '/services/live-videos',
     row: 2,
@@ -93,7 +125,8 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/promo-gifs.svg',
-      image: 'https://picsum.photos/id/912/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/promo-gifs.gif',
     },
     href: '/services/promo-gifs',
     row: 3,
@@ -104,7 +137,13 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/animations.svg',
-      image: 'https://picsum.photos/id/109/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/animations.png',
+      videos: [
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/animations-1.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/animations-2.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/animations-3.mp4',
+      ],
     },
     href: '/services/animations',
     row: 2,
@@ -115,7 +154,8 @@ const services = [
     asset: {
       illustration:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/rap-ads.svg',
-      image: 'https://picsum.photos/id/209/300/300',
+      image:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/rap-ads.png',
     },
     href: '/services/rap-ads',
     row: 3,

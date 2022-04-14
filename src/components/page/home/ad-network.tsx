@@ -8,6 +8,9 @@ const AdNetwork = () => {
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-tiktok.png',
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-ironsource.png',
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-vungle.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-unity.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-mintegral.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-pangle.png',
   ];
 
   return (
@@ -24,9 +27,9 @@ const AdNetwork = () => {
           globe.
         </p>
 
-        <div className="w-full my-5 sm:my-10 justify-center">
+        <div className="w-full my-5 lg:my-10 justify-center">
           {networks.map((item, idx) => (
-            <div key={idx} className="inline-block mx-5 my-3 sm:my-0">
+            <div key={idx} className="inline-block mx-5 my-3 lg:my-0">
               <img
                 src={item}
                 alt=""
@@ -38,20 +41,6 @@ const AdNetwork = () => {
 
         <p className="lg:text-lg text-gray-500">and more...</p>
       </div>
-
-      <style jsx>
-        {`
-          .jempol-gajah {
-            color: white;
-            background: repeating-linear-gradient(
-              24deg,
-              #ff0 1px,
-              transparent 3px,
-              transparent 20px
-            );
-          }
-        `}
-      </style>
     </Background>
   );
 };

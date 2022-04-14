@@ -58,12 +58,12 @@ const Portfolio = () => {
         <Marquee gradient={false} speed={80}>
           <div className={`flex w-full justify-around `}>
             {items.map((item: any) => (
-              <div key={item.id} className="mx-4">
+              <div key={item.id} className="mx-2 md:mx-3 lg:mx-4">
                 <img
                   src={item.asset}
                   alt=""
-                  className={`w-[288px] rounded-3xl ${
-                    item.id % 2 === 0 ? 'mt-32' : ''
+                  className={`w-[120px] md:w-[200px] lg:w-[280px] rounded-3xl ${
+                    item.id % 2 === 0 ? 'mt-12 md:mt-20 lg:mt-32' : ''
                   }`}
                 />
               </div>

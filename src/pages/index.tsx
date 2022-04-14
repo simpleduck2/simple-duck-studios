@@ -1,12 +1,12 @@
 import {
   Banner,
   About,
-  Offers,
   Services,
   Spotlight,
   AdNetwork,
   ContactUs,
   Portfolio,
+  Testimonials,
 } from '@components/page/home';
 
 const Home = () => {
@@ -15,7 +15,8 @@ const Home = () => {
       <Banner />
       <Portfolio />
       <About />
-      <Offers />
+      {/* <Offers /> */}
+      <Testimonials />
       <Services />
       <Spotlight />
       <AdNetwork />

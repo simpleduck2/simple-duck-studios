@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import Link from 'next/link';
+import Router from 'next/router';
 
 import { DropdownMenu } from '@components/dropdown';
 import { menus } from '@data/index';
@@ -28,7 +29,9 @@ const NavbarTwoColumns = (props: INavbarProps) => (
       <DropdownMenu
         title={'Menu'}
         items={menus.filter((x) => x.isMobile)}
-        onChange={(v: any) => console.log(v)}
+        onChange={(v: any) => {
+          Router.push(menus.find((x) => x.id === v)?.href as any);
+        }}
         classNames={{ wrapper: 'md:hidden' }}
       />
     </nav>

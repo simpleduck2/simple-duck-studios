@@ -1,5 +1,4 @@
 import Tippy from '@tippyjs/react';
-// import 'tippy.js/dist/tippy.css'; // optional
 import 'tippy.js/animations/scale.css';
 import Marquee from 'react-fast-marquee';
 import { followCursor } from 'tippy.js';
@@ -45,12 +44,13 @@ const Services = () => {
                       <img
                         src={item.asset.image}
                         alt=""
-                        className="w-40 lg:w-60 aspect-square max-w-none rounded-full transition all duration-200"
+                        className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
                       />
                     }
                     followCursor={true}
                     animation="scale"
                     plugins={[followCursor]}
+                    allowHTML={true}
                   >
                     <h4 className="text-xl sm:text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
                       {item.label}
