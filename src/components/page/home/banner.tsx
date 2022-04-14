@@ -10,16 +10,16 @@ const Banner = () => {
   const texts = [
     {
       first: 'We do',
+      second: 'Playables',
+      third: 'for Mobile Gaming and Apps',
+      fourth: '',
+    },
+    {
+      first: 'We do',
       second: 'Creatives',
       third: 'for Mobile Gaming and Apps',
       fourth: '',
     },
-    // {
-    //   first: 'We do',
-    //   second: 'Campaigns',
-    //   third: 'for Mobile Gaming and Apps',
-    //   fourth: '',
-    // },
     {
       first: 'We do',
       second: 'Video Ads',
@@ -37,7 +37,7 @@ const Banner = () => {
   const [text, setText] = React.useState(texts[0]);
   const [isTextShown, setIsTextShown] = React.useState(true);
 
-  let i = 0;
+  let i = 1;
   React.useEffect(() => {
     const intervalId = setInterval(async () => {
       setIsTextShown(false);
