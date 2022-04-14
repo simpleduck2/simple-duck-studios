@@ -67,7 +67,10 @@ const Banner = () => {
   // #endregion
 
   return (
-    <Background color="bg-white" className="relative pt-[112px]">
+    <Background
+      color="bg-white"
+      className="relative pt-[88px] md:pt-[96px] lg:pt-[112px]"
+    >
       <div className="absolute bottom-16 left-2 items-center gap-4 -rotate-90 hidden">
         <div>
           <CgArrowLongLeft size={20} />
@@ -80,7 +83,7 @@ const Banner = () => {
           <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-center">
             {text?.first}{' '}
             <Fade left duration={750} cascade when={isTextShown}>
-              <span>
+              <span className="z-[1]">
                 <Tippy
                   content={
                     <img
@@ -95,7 +98,7 @@ const Banner = () => {
                   allowHTML={true}
                 >
                   <span
-                    className={`hover:text-secondary underlined underlined-waved transition-all duration-200`}
+                    className={`text-secondary lg:text-black sm:hover:text-secondary underlined underlined-waved transition-all duration-200`}
                   >
                     {text?.second}
                   </span>
@@ -103,29 +106,29 @@ const Banner = () => {
               </span>
             </Fade>
           </h1>
-          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8 mb-20 text-center">
+          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8  mb-10 lg:mb-20 text-center">
             {text?.third}
           </h2>
 
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/3d-videos.svg"
             alt=""
-            className="absolute right-32 top-0 w-[40px] -z-[1] -rotate-[30deg] opacity-50"
+            className="absolute right-32 top-0 w-[30px] sm:w-[40px] -z-[1] -rotate-[30deg] opacity-50"
           />
           <img
-            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/animation.svg"
+            src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/animations.svg"
             alt=""
-            className="absolute left-0 top-20 w-[50px] -z-[1] -rotate-[30deg] opacity-50"
+            className="absolute left-0 top-20 w-[40px] sm:w-[50px] -z-[1] -rotate-[30deg] opacity-50"
           />
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/playables.svg"
             alt=""
-            className="absolute right-0 top-40 w-[30px] -z-[1] opacity-50"
+            className="absolute right-0 top-40 w-[20px] sm:w-[30px] -z-[1] opacity-50"
           />
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/video-ads.svg"
             alt=""
-            className="absolute left-[45%] top-64 w-[50px] -z-[1] rotate-[15deg] opacity-50"
+            className="absolute left-[45%] bottom-0 w-[40px] sm:w-[50px] -z-[1] rotate-[15deg] opacity-50"
           />
         </div>
 
@@ -182,6 +185,21 @@ const Banner = () => {
               bottom: 0px !important;
               -webkit-mask: url(https://derrint.sirv.com/Images/simple-duck-studios/home/underline-waved.svg);
               mask: url(https://derrint.sirv.com/Images/simple-duck-studios/home/underline-waved.svg);
+            }
+
+            @media only screen and (max-width: 1024px) {
+              .underlined:after,
+              .underlined:before {
+                bottom: -10px !important;
+                -webkit-animation: movemask 2s linear infinite;
+                animation: movemask 2s linear infinite;
+              }
+
+              .underlined:after {
+                width: 100%;
+                transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+                background: #0083ff;
+              }
             }
           `}
         </style>

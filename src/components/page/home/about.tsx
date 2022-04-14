@@ -2,7 +2,7 @@ import { Section } from '@components/layout';
 
 const About = () => {
   return (
-    <Section yPadding="py-32" id="about">
+    <Section yPadding="py-8 sm:py-16 lg:py-32" id="about">
       <div className="relative flex flex-col justify-center z-[1]">
         <div>
           <div className="w-full sm:w-2/3 lg:w-1/2">
@@ -41,13 +41,13 @@ const About = () => {
         <img
           src="https://derrint.sirv.com/Images/simple-duck-studios/home/wave-1.svg"
           alt=""
-          className="absolute right-32 top-10 w-[80px] -z-[1]"
+          className="absolute hidden sm:block right-0 lg:right-32 top-10 w-[40px] sm:w-[80px] -z-[1]"
         />
 
         <img
           src="https://derrint.sirv.com/Images/simple-duck-studios/home/wave-2.svg"
           alt=""
-          className="absolute bottom-10 left-40 w-[80px] -z-[1]"
+          className="absolute hidden sm:block bottom-10 left-0 lg:left-40 w-[40px] sm:w-[80px] -z-[1]"
         />
       </div>
     </Section>
