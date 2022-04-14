@@ -1,19 +1,19 @@
-import services from './services';
+// import services from './services';
 
 const menus = [
-  {
-    id: 1,
-    label: 'Our Services',
-    href: '',
-    submenus: services,
-    isDesktop: true,
-    isMobile: false,
-  },
+  // {
+  //   id: 1,
+  //   label: 'Our Services',
+  //   href: '',
+  //   submenus: services,
+  //   isDesktop: true,
+  //   isMobile: false,
+  // },
   {
     id: 2,
-    label: 'Our Services',
-    href: '#services',
-    isDesktop: false,
+    label: 'Services',
+    href: '/services',
+    isDesktop: true,
     isMobile: true,
   },
   {
