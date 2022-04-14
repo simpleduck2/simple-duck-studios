@@ -12,7 +12,7 @@ const menus = [
   {
     id: 2,
     label: 'Services',
-    href: '/services',
+    href: '/services/playables',
     isDesktop: true,
     isMobile: true,
   },
