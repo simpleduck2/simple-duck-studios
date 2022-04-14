@@ -1,7 +1,10 @@
 import React from 'react';
 
+import Tippy from '@tippyjs/react';
+import 'tippy.js/animations/scale.css';
 import { CgArrowLongLeft } from 'react-icons/cg';
 import { Fade } from 'react-reveal';
+import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
@@ -12,25 +15,29 @@ const Banner = () => {
       first: 'We do',
       second: 'Playables',
       third: 'for Mobile Gaming and Apps',
-      fourth: '',
+      asset:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
     },
     {
       first: 'We do',
       second: 'Creatives',
       third: 'for Mobile Gaming and Apps',
-      fourth: '',
+      asset:
+        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-3.png',
     },
     {
       first: 'We do',
       second: 'Video Ads',
       third: 'for Mobile Gaming and Apps',
-      fourth: '',
+      asset:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.png',
     },
     {
       first: 'We do',
       second: 'Branding',
       third: 'for Mobile Gaming and Apps',
-      fourth: '',
+      asset:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/brand-guidelines.png',
     },
   ];
 
@@ -73,10 +80,26 @@ const Banner = () => {
           <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-center">
             {text?.first}{' '}
             <Fade left duration={750} cascade when={isTextShown}>
-              <span
-                className={`hover:text-secondary underlined underlined-waved transition-all duration-200`}
-              >
-                {text?.second}
+              <span>
+                <Tippy
+                  content={
+                    <img
+                      src={text?.asset}
+                      alt=""
+                      className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                    />
+                  }
+                  followCursor={true}
+                  animation="scale"
+                  plugins={[followCursor]}
+                  allowHTML={true}
+                >
+                  <span
+                    className={`hover:text-secondary underlined underlined-waved transition-all duration-200`}
+                  >
+                    {text?.second}
+                  </span>
+                </Tippy>
               </span>
             </Fade>
           </h1>

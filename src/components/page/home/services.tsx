@@ -1,5 +1,4 @@
 import Tippy from '@tippyjs/react';
-// import 'tippy.js/dist/tippy.css'; // optional
 import 'tippy.js/animations/scale.css';
 import Marquee from 'react-fast-marquee';
 import { followCursor } from 'tippy.js';
