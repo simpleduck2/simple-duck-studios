@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Tippy from '@tippyjs/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { isSafari, isIOS } from 'react-device-detect';
 import Marquee from 'react-fast-marquee';
+import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
@@ -97,13 +99,27 @@ const Services = () => {
                 <div key={item.id} className="mx-8">
                   <Link href={item.href}>
                     <a>
-                      <h4
-                        className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
-                          item.id === currentId ? 'text-secondary' : ''
-                        }`}
+                      <Tippy
+                        content={
+                          <img
+                            src={item.asset.image}
+                            alt=""
+                            className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                          />
+                        }
+                        followCursor={true}
+                        animation="scale"
+                        plugins={[followCursor]}
+                        allowHTML={true}
                       >
-                        {item.label}
-                      </h4>
+                        <h4
+                          className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
+                            item.id === currentId ? 'text-secondary' : ''
+                          }`}
+                        >
+                          {item.label}
+                        </h4>
+                      </Tippy>
                     </a>
                   </Link>
                 </div>
