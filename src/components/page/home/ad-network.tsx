@@ -8,6 +8,9 @@ const AdNetwork = () => {
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-tiktok.png',
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-ironsource.png',
     'https://derrint.sirv.com/Images/simple-duck-studios/home/network-vungle.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-unity.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-mintegral.png',
+    'https://derrint.sirv.com/Images/simple-duck-studios/home/network-pangle.png',
   ];
 
   return (
