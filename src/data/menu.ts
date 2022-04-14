@@ -19,14 +19,14 @@ const menus = [
   {
     id: 3,
     label: 'About',
-    href: '#about',
+    href: '/#about',
     isDesktop: true,
     isMobile: true,
   },
   {
     id: 4,
     label: 'Contact Us',
-    href: '#contact',
+    href: '/#contact',
     isButton: true,
     isDesktop: true,
     isMobile: true,

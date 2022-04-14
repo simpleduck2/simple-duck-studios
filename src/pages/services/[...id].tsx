@@ -83,7 +83,7 @@ const Services = () => {
     <Background
       id="services"
       color="white"
-      className="relative py-16 mt-[112px]"
+      className="relative py-16 mt-[88px] md:mt-[96px] lg:mt-[112px]"
     >
       <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center ">
         <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
