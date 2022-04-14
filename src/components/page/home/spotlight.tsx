@@ -1,14 +1,28 @@
-import Link from 'next/link';
+import React from 'react';
+
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 import { Section } from '@components/layout';
+import { Modal } from '@components/modal';
+import { useActions } from '@overmind/index';
 
 const Spotlight = () => {
+  const { showModal } = useActions();
+
   const features = [
     'Playable & support on all major platform',
     'Optimize & boots your ad performance',
     'Drive user engagement',
   ];
+
+  const videoUrls = [
+    'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.mp4',
+    'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.mp4',
+    'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.mp4',
+    'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.mp4',
+  ];
+
+  const [videoUrl, setVideoUrl] = React.useState(videoUrls[0]);
 
   return (
     <Section yPadding="py-10 sm:py-20">
@@ -44,11 +58,15 @@ const Spotlight = () => {
             ))}
           </ul>
           <div className="flex mt-10 justify-center sm:justify-start">
-            <Link href={'/portfolio'} passHref>
-              <a className="lg:text-lg bg-primary px-6 py-4 rounded-full">
-                View Portfolio
-              </a>
-            </Link>
+            <button
+              onClick={() => {
+                setVideoUrl(videoUrls[0]);
+                showModal('video-player');
+              }}
+              className="lg:text-lg bg-primary px-6 py-4 rounded-full"
+            >
+              View Portfolio
+            </button>
           </div>
         </div>
 
@@ -58,6 +76,10 @@ const Spotlight = () => {
               src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png"
               className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
               alt=""
+              onClick={() => {
+                setVideoUrl(videoUrls[0]);
+                showModal('video-player');
+              }}
             />
           </div>
           <div className="flex gap-5 lg:gap-10">
@@ -66,6 +88,10 @@ const Spotlight = () => {
                 src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png"
                 className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                 alt=""
+                onClick={() => {
+                  setVideoUrl(videoUrls[3]);
+                  showModal('video-player');
+                }}
               />
             </div>
             <div className="w-1/2">
@@ -73,11 +99,38 @@ const Spotlight = () => {
                 src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png"
                 className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                 alt=""
+                onClick={() => {
+                  setVideoUrl(videoUrls[1]);
+                  showModal('video-player');
+                }}
               />
             </div>
           </div>
         </div>
       </div>
+
+      <Modal name="video-player" closeButton={{ color: 'white' }}>
+        <div className="text-left bg-white shadow-xl rounded-3xl">
+          <>
+            <div
+              className="flex justify-center"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <video
+                    loop
+                    controls
+                    autoplay
+                    playsinline
+                    preload="metadata"
+                    class="rounded-3xl max-h-[720px]"
+                  >
+                    <source src="${videoUrl}" type="video/mp4" />
+                  </video>`,
+              }}
+            />
+          </>
+        </div>
+      </Modal>
     </Section>
   );
 };

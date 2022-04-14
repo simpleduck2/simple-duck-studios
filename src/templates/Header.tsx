@@ -10,7 +10,7 @@ import Logo from '@images/logos/logo-sds.svg';
 
 const Header = () => {
   return (
-    <Background color="bg-white" className="fixed top-0 w-full z-50 shadow-lg">
+    <Background color="bg-white" className="fixed top-0 w-full z-10 shadow-lg">
       <Section yPadding="py-6" className="relative" isHeader>
         <NavbarTwoColumns logo={<Image src={Logo} alt="" />}>
           {menus.map(
