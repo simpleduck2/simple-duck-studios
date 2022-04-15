@@ -184,6 +184,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/rap-ads.svg',
       image:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/rap-ads.png',
+      video:
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/rap-ads.mp4',
       gif: RapAds,
     },
     href: '/services/rap-ads',
