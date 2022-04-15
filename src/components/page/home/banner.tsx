@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Tippy from '@tippyjs/react';
+import Image from 'next/image';
 import 'tippy.js/animations/scale.css';
 import { CgArrowLongLeft } from 'react-icons/cg';
 import { Fade, Zoom } from 'react-reveal';
@@ -8,6 +9,10 @@ import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
+import BrandGuidelines from '@images/services/brand-guidelines.gif';
+import Creatives from '@images/services/creatives.gif';
+import Playable from '@images/services/playable.gif';
+import VideoAds from '@images/services/video-ads.gif';
 
 const Banner = () => {
   const texts = [
@@ -15,29 +20,33 @@ const Banner = () => {
       first: 'We do',
       second: 'Playables',
       third: 'for Mobile Gaming and Apps',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
+      // asset:
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
+      asset: Playable,
     },
     {
       first: 'We do',
       second: 'Creatives',
       third: 'for Mobile Gaming and Apps',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-3.png',
+      // asset:
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-3.png',
+      asset: Creatives,
     },
     {
       first: 'We do',
       second: 'Video Ads',
       third: 'for Mobile Gaming and Apps',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.png',
+      // asset:
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.png',
+      asset: VideoAds,
     },
     {
       first: 'We do',
       second: 'Branding',
       third: 'for Mobile Gaming and Apps',
-      asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/brand-guidelines.png',
+      // asset:
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/brand-guidelines.png',
+      asset: BrandGuidelines,
     },
   ];
 
@@ -95,11 +104,22 @@ const Banner = () => {
               {text?.first}{' '}
               <Tippy
                 content={
-                  <img
-                    src={text?.asset}
-                    alt=""
-                    className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                  />
+                  typeof text?.asset === 'string' ? (
+                    <img
+                      src={text?.asset}
+                      alt=""
+                      className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                    />
+                  ) : (
+                    <Image
+                      src={text?.asset as any}
+                      alt=""
+                      className="static w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                      objectFit="cover"
+                      width={200}
+                      height={200}
+                    />
+                  )
                 }
                 followCursor={true}
                 animation="scale"

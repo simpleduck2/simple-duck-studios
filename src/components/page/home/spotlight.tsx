@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Image from 'next/image';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { Fade } from 'react-reveal';
 
 import { Section } from '@components/layout';
 import { Modal } from '@components/modal';
+import Playable1 from '@images/services/playable-1.gif';
+import Playable2 from '@images/services/playable-2.gif';
+import Playable4 from '@images/services/playable-4.gif';
 import { useActions } from '@overmind/index';
 
 const Spotlight = () => {
@@ -76,10 +80,19 @@ const Spotlight = () => {
         <Fade bottom duration={750} delay={500} cascade>
           <div className="w-full sm:w-5/12 flex flex-col gap-5 lg:gap-10">
             <div>
-              <img
+              {/* <img
                 src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png"
                 className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                 alt=""
+                onClick={() => {
+                  setVideoUrl(videoUrls[0]);
+                  showModal('video-player');
+                }}
+              /> */}
+              <Image
+                src={Playable1}
+                alt=""
+                className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                 onClick={() => {
                   setVideoUrl(videoUrls[0]);
                   showModal('video-player');
@@ -88,7 +101,7 @@ const Spotlight = () => {
             </div>
             <div className="flex gap-5 lg:gap-10">
               <div className="w-1/2">
-                <img
+                {/* <img
                   src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png"
                   className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                   alt=""
@@ -96,13 +109,31 @@ const Spotlight = () => {
                     setVideoUrl(videoUrls[3]);
                     showModal('video-player');
                   }}
+                /> */}
+                <Image
+                  src={Playable4}
+                  alt=""
+                  className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
+                  onClick={() => {
+                    setVideoUrl(videoUrls[3]);
+                    showModal('video-player');
+                  }}
                 />
               </div>
               <div className="w-1/2">
-                <img
+                {/* <img
                   src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png"
                   className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                   alt=""
+                  onClick={() => {
+                    setVideoUrl(videoUrls[1]);
+                    showModal('video-player');
+                  }}
+                /> */}
+                <Image
+                  src={Playable2}
+                  alt=""
+                  className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                   onClick={() => {
                     setVideoUrl(videoUrls[1]);
                     showModal('video-player');
