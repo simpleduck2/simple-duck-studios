@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Tippy from '@tippyjs/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { isSafari, isIOS } from 'react-device-detect';
@@ -306,10 +307,18 @@ const Services = () => {
                       <a>
                         <Tippy
                           content={
-                            <img
-                              src={item.asset.image}
+                            // <img
+                            //   src={item.asset.image}
+                            //   alt=""
+                            //   className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                            // />
+                            <Image
+                              src={item?.asset.gif}
                               alt=""
-                              className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                              className="static w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                              objectFit="cover"
+                              width={200}
+                              height={200}
                             />
                           }
                           followCursor={true}
