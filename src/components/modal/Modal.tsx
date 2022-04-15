@@ -5,9 +5,15 @@ import { IoCloseCircleOutline } from 'react-icons/io5';
 
 import { useActions, useState } from '@overmind/index';
 
+type ICloseButtonProps = {
+  hidden?: boolean;
+  color?: string;
+};
+
 type IModalProps = {
   children: ReactNode;
   name: string;
+  closeButton?: ICloseButtonProps;
 };
 
 const Modal = (props: IModalProps) => {
@@ -56,12 +62,15 @@ const Modal = (props: IModalProps) => {
           >
             <div className="inline-block overflow-hidden text-center align-middle transition-all transform">
               <button
-                className="absolute top-3 right-3"
+                className="absolute top-3 right-3 z-20"
                 onClick={() => {
                   hideModal();
                 }}
               >
-                <IoCloseCircleOutline size={32} color="#919199" />
+                <IoCloseCircleOutline
+                  size={32}
+                  color={props?.closeButton?.color || '#919199'}
+                />
               </button>
               {props.children}
             </div>

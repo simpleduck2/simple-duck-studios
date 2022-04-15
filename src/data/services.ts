@@ -7,11 +7,17 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/playables.svg',
       image:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
-      images: [
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png',
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.png',
-        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png',
+      // images: [
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png',
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png',
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.png',
+      //   'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png',
+      // ],
+      videos: [
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.mp4',
+        'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.mp4',
       ],
     },
     href: '/services/playables',
