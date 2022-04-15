@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Fade } from 'react-reveal';
+
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
 
@@ -15,20 +17,22 @@ const Testimonials = () => {
     },
   ];
   return (
-    <Background color="bg-primary" className="overflow-hidden">
-      <Section>
-        <div className="relative pb-10 flex flex-col justify-center items-center text-center gap-1 lg:gap-4">
-          {/* <h3 className="text-lg sm:text-2xl">What we offer</h3> */}
-          <h1 className="text-3xl sm:text-5xl lg:text-[64px] lg:leading-[64px] font-bold mb-0">
-            Testimonials&quot;
-          </h1>
-          <p className="lg:text-lg lg:w-2/3">See what people are saying</p>
+    <Fade bottom duration={750} delay={250}>
+      <Background color="bg-primary" className="overflow-hidden">
+        <Section>
+          <Fade bottom duration={750} delay={500} cascade>
+            <div className="relative pb-10 flex flex-col justify-center items-center text-center gap-1 lg:gap-4">
+              {/* <h3 className="text-lg sm:text-2xl">What we offer</h3> */}
+              <h1 className="text-3xl sm:text-5xl lg:text-[64px] lg:leading-[64px] font-bold mb-0">
+                Testimonials&quot;
+              </h1>
+              <p className="lg:text-lg lg:w-2/3">See what people are saying</p>
 
-          <div className="flex items-center justify-center sm:flex-row w-full gap-8 mt-8 sm:mt-8 lg:mt-10 z-[1]">
-            {testimonials.map((item) => (
-              <div
-                key={item.id}
-                className={`max-w-[600px] bg-white rounded-3xl px-10 py-12 rounded-br-none flex flex-col items-center relative 
+              <div className="flex items-center justify-center sm:flex-row w-full gap-8 mt-8 sm:mt-8 lg:mt-10 z-[1]">
+                {testimonials.map((item) => (
+                  <div
+                    key={item.id}
+                    className={`max-w-[600px] bg-white rounded-3xl px-10 py-12 rounded-br-none flex flex-col items-center relative 
                 after:content-[''] 
                 after:absolute 
                 after:-z-[1] 
@@ -43,20 +47,22 @@ const Testimonials = () => {
                   lg:after:w-[85%] 
                 after:skew-x-[315deg]
                 `}
-              >
-                <img
-                  src={item.asset}
-                  alt=""
-                  className="h-12 lg:h-16 aspect-auto max-w-none"
-                />
-                <p className="lg:text-lg mt-8">{item.message}</p>
-                <h4 className="text-gray-500 mt-8">{item.sender}</h4>
+                  >
+                    <img
+                      src={item.asset}
+                      alt=""
+                      className="h-12 lg:h-16 aspect-auto max-w-none"
+                    />
+                    <p className="lg:text-lg mt-8">{item.message}</p>
+                    <h4 className="text-gray-500 mt-8">{item.sender}</h4>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-    </Background>
+            </div>
+          </Fade>
+        </Section>
+      </Background>
+    </Fade>
   );
 };
 

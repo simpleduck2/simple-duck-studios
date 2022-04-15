@@ -82,33 +82,41 @@ const Banner = () => {
         <div className="relative h-full flex flex-col justify-center z-[1] py-6">
           <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-center">
             {text?.first}{' '}
-            <Fade left duration={750} cascade when={isTextShown}>
+            <Tippy
+              content={
+                <img
+                  src={text?.asset}
+                  alt=""
+                  className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                />
+              }
+              followCursor={true}
+              animation="scale"
+              plugins={[followCursor]}
+              allowHTML={true}
+            >
               <span className="z-[1]">
-                <Tippy
-                  content={
-                    <img
-                      src={text?.asset}
-                      alt=""
-                      className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                    />
-                  }
-                  followCursor={true}
-                  animation="scale"
-                  plugins={[followCursor]}
-                  allowHTML={true}
+                <Fade
+                  left
+                  duration={750}
+                  delay={250}
+                  cascade
+                  when={isTextShown}
                 >
                   <span
                     className={`text-secondary lg:text-black sm:hover:text-secondary underlined underlined-waved transition-all duration-200`}
                   >
                     {text?.second}
                   </span>
-                </Tippy>
+                </Fade>
               </span>
-            </Fade>
+            </Tippy>
           </h1>
-          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8  mb-10 lg:mb-20 text-center">
-            {text?.third}
-          </h2>
+          <Fade top duration={750} delay={250}>
+            <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold mt-4 sm:mt-6 xl:mt-8  mb-10 lg:mb-20 text-center">
+              {text?.third}
+            </h2>
+          </Fade>
 
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/3d-videos.svg"

@@ -1,6 +1,7 @@
 import Tippy from '@tippyjs/react';
 import 'tippy.js/animations/scale.css';
 import Marquee from 'react-fast-marquee';
+import { Fade } from 'react-reveal';
 import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
@@ -27,43 +28,45 @@ const Services = () => {
   ];
 
   return (
-    <Background id="services" color="bg-black py-16 lg:py-0">
-      {/* <Section> */}
-      <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
-          Our Services
-        </h1>
+    <Fade bottom duration={750} delay={250}>
+      <Background id="services" color="bg-black py-16 lg:py-0">
+        <Fade right duration={1250} delay={500} cascade>
+          <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
+            <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
+              Our Services
+            </h1>
 
-        {rows.map((row) => (
-          <Marquee key={row.number} gradient={false} speed={row.speed}>
-            <div className={`flex w-full py-8 lg:py-12 justify-around `}>
-              {getItemsFromRow(row.number).map((item: any) => (
-                <div key={item.id} className="mx-8">
-                  <Tippy
-                    content={
-                      <img
-                        src={item.asset.image}
-                        alt=""
-                        className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                      />
-                    }
-                    followCursor={true}
-                    animation="scale"
-                    plugins={[followCursor]}
-                    allowHTML={true}
-                  >
-                    <h4 className="text-xl sm:text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
-                      {item.label}
-                    </h4>
-                  </Tippy>
+            {rows.map((row) => (
+              <Marquee key={row.number} gradient={false} speed={row.speed}>
+                <div className={`flex w-full py-8 lg:py-12 justify-around `}>
+                  {getItemsFromRow(row.number).map((item: any) => (
+                    <div key={item.id} className="mx-8">
+                      <Tippy
+                        content={
+                          <img
+                            src={item.asset.image}
+                            alt=""
+                            className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                          />
+                        }
+                        followCursor={true}
+                        animation="scale"
+                        plugins={[followCursor]}
+                        allowHTML={true}
+                      >
+                        <h4 className="text-xl sm:text-2xl lg:text-[32px] inline-block hover:text-primary transition all duration-200">
+                          {item.label}
+                        </h4>
+                      </Tippy>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </Marquee>
-        ))}
-      </div>
-      {/* </Section> */}
-    </Background>
+              </Marquee>
+            ))}
+          </div>
+        </Fade>
+      </Background>
+    </Fade>
   );
 };
 
