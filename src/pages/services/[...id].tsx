@@ -293,48 +293,51 @@ const Services = () => {
           </Section>
         </Fade>
 
-        <Fade right duration={1250} delay={750} cascade when={state.isReady}>
-          <div className="mt-10">
-            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-5">
-              Other Services
-            </h3>
-            {rows.map((row) => (
-              <Marquee key={row.number} gradient={false} speed={row.speed}>
-                <div className={`flex w-full py-4 lg:py-8 justify-around `}>
-                  {getItemsFromRow(row.number).map((item: any) => (
-                    <div key={item.id} className="mx-8">
-                      <Link href={item.href}>
-                        <a>
-                          <Tippy
-                            content={
-                              <img
-                                src={item.asset.image}
-                                alt=""
-                                className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                              />
-                            }
-                            followCursor={true}
-                            animation="scale"
-                            plugins={[followCursor]}
-                            allowHTML={true}
+        <div className="mt-10 w-full relative flex flex-col justify-center items-center">
+          <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-5">
+            Other Services
+          </h3>
+          {rows.map((row) => (
+            <Marquee key={row.number} gradient={false} speed={row.speed}>
+              <div className={`flex w-full py-4 lg:py-8 justify-around `}>
+                {getItemsFromRow(row.number).map((item: any) => (
+                  <div key={item.id} className="mx-8">
+                    <Link href={item.href}>
+                      <a>
+                        <Tippy
+                          content={
+                            <img
+                              src={item.asset.image}
+                              alt=""
+                              className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                            />
+                          }
+                          followCursor={true}
+                          animation="scale"
+                          plugins={[followCursor]}
+                          allowHTML={true}
+                        >
+                          <h4
+                            className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
+                              item.id === currentId ? 'text-secondary' : ''
+                            }`}
                           >
-                            <h4
-                              className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
-                                item.id === currentId ? 'text-secondary' : ''
-                              }`}
-                            >
-                              {item.label}
-                            </h4>
-                          </Tippy>
-                        </a>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </Marquee>
-            ))}
-          </div>
-        </Fade>
+                            <img
+                              src={item.asset.illustration}
+                              alt=""
+                              className="w-6 sm:w-10 mr-2 sm:mr-4 aspect-square object-contain inline-block"
+                            />
+                            {item.label}
+                          </h4>
+                        </Tippy>
+                      </a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+          ))}
+        </div>
       </div>
     </Background>
   );
