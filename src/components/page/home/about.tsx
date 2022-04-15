@@ -1,13 +1,27 @@
+import React from 'react';
+
 import { Fade, Zoom } from 'react-reveal';
 
 import { Section } from '@components/layout';
 
 const About = () => {
+  const [state, setState] = React.useState({
+    isReady: false,
+  });
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setState({ ...state, isReady: true });
+    }, 250);
+
+    return () => {};
+  }, []);
+
   return (
     <Section yPadding="py-8 sm:py-16 lg:py-32" id="about">
       <div className="relative flex flex-col justify-center z-[1]">
         <div>
-          <Fade left duration={750} delay={250}>
+          <Fade left duration={750} delay={0} when={state.isReady}>
             <div className="w-full sm:w-2/3 lg:w-1/2">
               <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-5">
                 Simple Duck is your go-to partner in creative ads
@@ -48,7 +62,7 @@ const About = () => {
           </Fade>
         </div>
 
-        <Zoom duration={750} delay={500}>
+        <Zoom duration={750} delay={250} when={state.isReady}>
           <img
             src="https://derrint.sirv.com/Images/simple-duck-studios/home/wave-1.svg"
             alt=""

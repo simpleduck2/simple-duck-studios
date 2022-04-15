@@ -20,7 +20,7 @@ const AdNetwork = () => {
       color="bg-white"
       className="bg-[url('https://derrint.sirv.com/Images/simple-duck-studios/home/network-bg.svg')] bg-cover py-8 lg:py-0"
     >
-      <Fade bottom duration={750} delay={250} cascade>
+      <Fade bottom duration={750} delay={500} cascade>
         <div className="relative lg:min-h-[360px] flex flex-col justify-center items-center text-center">
           <h1 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3">
             Ad Network
