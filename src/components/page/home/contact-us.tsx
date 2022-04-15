@@ -8,6 +8,7 @@ import { IoPaperPlaneOutline } from 'react-icons/io5';
 import { Fade } from 'react-reveal';
 
 import { Section } from '@components/layout';
+import { services } from '@data/index';
 
 const ContactUs = () => {
   const plans = ['$500 - $5K', '$5k - $20k', '$20k - $50k', '$50k+'];
@@ -114,7 +115,12 @@ const ContactUs = () => {
                     <option value="" disabled selected>
                       Choose your project type
                     </option>
-                    <option value="web">Web Based</option>
+                    {services.map((item) => (
+                      <option key={item.id} value={item.id}>
+                        {item.label}
+                      </option>
+                    ))}
+                    <option value="others">Others</option>
                   </select>
                   <FaChevronDown
                     size={12}
