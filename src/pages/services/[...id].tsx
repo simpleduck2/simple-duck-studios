@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { isSafari, isIOS } from 'react-device-detect';
 import Marquee from 'react-fast-marquee';
+import { Fade } from 'react-reveal';
 import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
@@ -81,6 +82,16 @@ const Services = () => {
     }
   }, []);
 
+  const [state, setState] = React.useState({
+    isReady: false,
+  });
+
+  React.useEffect(() => {
+    setState({ ...state, isReady: true });
+
+    return () => {};
+  }, []);
+
   return (
     <Background
       id="services"
@@ -88,80 +99,49 @@ const Services = () => {
       className="relative py-16 mt-[88px] md:mt-[96px] lg:mt-[112px]"
     >
       <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center ">
-        <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
-          Our Services
-        </h1>
+        <Fade top duration={750} delay={250} when={state.isReady}>
+          <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-4">
+            Our Services
+          </h1>
+        </Fade>
 
-        {rows.map((row) => (
-          <Marquee key={row.number} gradient={false} speed={row.speed}>
-            <div className={`flex w-full py-4 lg:py-8 justify-around `}>
-              {getItemsFromRow(row.number).map((item: any) => (
-                <div key={item.id} className="mx-8">
-                  <Link href={item.href}>
-                    <a>
-                      <Tippy
-                        content={
-                          <img
-                            src={item.asset.image}
-                            alt=""
-                            className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                          />
-                        }
-                        followCursor={true}
-                        animation="scale"
-                        plugins={[followCursor]}
-                        allowHTML={true}
-                      >
-                        <h4
-                          className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
-                            item.id === currentId ? 'text-secondary' : ''
-                          }`}
-                        >
-                          {item.label}
-                        </h4>
-                      </Tippy>
-                    </a>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </Marquee>
-        ))}
-
-        <Section className="">
-          {!currentService?.asset?.video &&
-            !currentService?.asset?.videos &&
-            !currentService?.asset?.images && (
-              <img
-                src={currentService?.asset?.image}
-                alt=""
-                className="rounded-3xl max-h-[480px]"
-              />
-            )}
-
-          {currentService?.asset?.images && (
-            <div className="grid grid-cols-2 gap-5 lg:gap-10">
-              {currentService?.asset?.images.map((image: any, idx: number) => (
+        <Fade bottom duration={750} delay={500} when={state.isReady}>
+          <Section className="">
+            {!currentService?.asset?.video &&
+              !currentService?.asset?.videos &&
+              !currentService?.asset?.images && (
                 <img
-                  key={idx}
-                  src={image}
+                  src={currentService?.asset?.image}
                   alt=""
                   className="rounded-3xl max-h-[480px]"
                 />
-              ))}
-            </div>
-          )}
+              )}
 
-          {currentService?.asset?.video && (
-            <>
-              {shouldUseImage ? (
-                <img src={currentService?.asset?.image} alt="Muted Video" />
-              ) : (
-                <div
-                  className=""
-                  ref={videoParentRef}
-                  dangerouslySetInnerHTML={{
-                    __html: `
+            {currentService?.asset?.images && (
+              <div className="grid grid-cols-2 gap-5 lg:gap-10">
+                {currentService?.asset?.images.map(
+                  (image: any, idx: number) => (
+                    <img
+                      key={idx}
+                      src={image}
+                      alt=""
+                      className="rounded-3xl max-h-[480px]"
+                    />
+                  )
+                )}
+              </div>
+            )}
+
+            {currentService?.asset?.video && (
+              <>
+                {shouldUseImage ? (
+                  <img src={currentService?.asset?.image} alt="Muted Video" />
+                ) : (
+                  <div
+                    className=""
+                    ref={videoParentRef}
+                    dangerouslySetInnerHTML={{
+                      __html: `
                   <video
                     loop
                     muted
@@ -172,23 +152,24 @@ const Services = () => {
                   >
                   <source src="${currentService?.asset?.video}" type="video/mp4" />
                   </video>`,
-                  }}
-                />
-              )}
-            </>
-          )}
+                    }}
+                  />
+                )}
+              </>
+            )}
 
-          {currentService?.asset?.videos && currentService.id === 'animations' && (
-            <>
-              {shouldUseImage ? (
-                <img src={currentService?.asset?.image} alt="Muted Video" />
-              ) : (
-                <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
-                  <div
-                    className="flex justify-center"
-                    ref={videoParentRef}
-                    dangerouslySetInnerHTML={{
-                      __html: `
+            {currentService?.asset?.videos &&
+              currentService.id === 'animations' && (
+                <>
+                  {shouldUseImage ? (
+                    <img src={currentService?.asset?.image} alt="Muted Video" />
+                  ) : (
+                    <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
+                      <div
+                        className="flex justify-center"
+                        ref={videoParentRef}
+                        dangerouslySetInnerHTML={{
+                          __html: `
                         <video
                           loop
                           muted
@@ -199,14 +180,14 @@ const Services = () => {
                         >
                         <source src="${currentService?.asset?.videos[0]}" type="video/mp4" />
                         </video>`,
-                    }}
-                  />
-                  <div className="flex flex-col gap-5 lg:gap-10">
-                    <div
-                      className=""
-                      ref={videoParentRef}
-                      dangerouslySetInnerHTML={{
-                        __html: `
+                        }}
+                      />
+                      <div className="flex flex-col gap-5 lg:gap-10">
+                        <div
+                          className=""
+                          ref={videoParentRef}
+                          dangerouslySetInnerHTML={{
+                            __html: `
                           <video
                             loop
                             muted
@@ -217,13 +198,13 @@ const Services = () => {
                           >
                           <source src="${currentService?.asset?.videos[1]}" type="video/mp4" />
                           </video>`,
-                      }}
-                    />
-                    <div
-                      className=""
-                      ref={videoParentRef}
-                      dangerouslySetInnerHTML={{
-                        __html: `
+                          }}
+                        />
+                        <div
+                          className=""
+                          ref={videoParentRef}
+                          dangerouslySetInnerHTML={{
+                            __html: `
                           <video
                             loop
                             muted
@@ -234,62 +215,29 @@ const Services = () => {
                           >
                           <source src="${currentService?.asset?.videos[2]}" type="video/mp4" />
                           </video>`,
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-
-          {currentService?.asset?.videos &&
-            currentService.id === 'live-videos' && (
-              <>
-                {shouldUseImage ? (
-                  <img src={currentService?.asset?.image} alt="Muted Video" />
-                ) : (
-                  <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
-                    {currentService?.asset?.videos.map(
-                      (video: any, idx: number) => (
-                        <div
-                          key={idx}
-                          className="flex justify-center"
-                          ref={videoParentRef}
-                          dangerouslySetInnerHTML={{
-                            __html: `
-                          <video
-                            loop
-                            muted
-                            autoplay
-                            playsinline
-                            preload="metadata"
-                            class="rounded-3xl max-h-[720px]"
-                          >
-                          <source src="${video}" type="video/mp4" />
-                          </video>`,
                           }}
                         />
-                      )
-                    )}
-                  </div>
-                )}
-              </>
-            )}
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
 
-          {currentService?.asset?.videos && currentService.id === 'playables' && (
-            <>
-              {shouldUseImage ? (
-                <img src={currentService?.asset?.image} alt="Muted Video" />
-              ) : (
-                <div className="grid grid-cols-2 gap-5 lg:gap-10">
-                  {currentService?.asset?.videos.map(
-                    (video: any, idx: number) => (
-                      <div
-                        key={idx}
-                        className="flex justify-center"
-                        ref={videoParentRef}
-                        dangerouslySetInnerHTML={{
-                          __html: `
+            {currentService?.asset?.videos &&
+              currentService.id === 'live-videos' && (
+                <>
+                  {shouldUseImage ? (
+                    <img src={currentService?.asset?.image} alt="Muted Video" />
+                  ) : (
+                    <div className="flex items-center justify-center w-full gap-5 lg:gap-10">
+                      {currentService?.asset?.videos.map(
+                        (video: any, idx: number) => (
+                          <div
+                            key={idx}
+                            className="flex justify-center"
+                            ref={videoParentRef}
+                            dangerouslySetInnerHTML={{
+                              __html: `
                           <video
                             loop
                             muted
@@ -300,15 +248,93 @@ const Services = () => {
                           >
                           <source src="${video}" type="video/mp4" />
                           </video>`,
-                        }}
-                      />
-                    )
+                            }}
+                          />
+                        )
+                      )}
+                    </div>
                   )}
-                </div>
+                </>
               )}
-            </>
-          )}
-        </Section>
+
+            {currentService?.asset?.videos &&
+              currentService.id === 'playables' && (
+                <>
+                  {shouldUseImage ? (
+                    <img src={currentService?.asset?.image} alt="Muted Video" />
+                  ) : (
+                    <div className="grid grid-cols-2 gap-5 lg:gap-10">
+                      {currentService?.asset?.videos.map(
+                        (video: any, idx: number) => (
+                          <div
+                            key={idx}
+                            className="flex justify-center"
+                            ref={videoParentRef}
+                            dangerouslySetInnerHTML={{
+                              __html: `
+                          <video
+                            loop
+                            muted
+                            autoplay
+                            playsinline
+                            preload="metadata"
+                            class="rounded-3xl max-h-[720px]"
+                          >
+                          <source src="${video}" type="video/mp4" />
+                          </video>`,
+                            }}
+                          />
+                        )
+                      )}
+                    </div>
+                  )}
+                </>
+              )}
+          </Section>
+        </Fade>
+
+        <Fade right duration={1250} delay={750} cascade when={state.isReady}>
+          <div className="mt-10">
+            <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-3 lg:mb-5">
+              Other Services
+            </h3>
+            {rows.map((row) => (
+              <Marquee key={row.number} gradient={false} speed={row.speed}>
+                <div className={`flex w-full py-4 lg:py-8 justify-around `}>
+                  {getItemsFromRow(row.number).map((item: any) => (
+                    <div key={item.id} className="mx-8">
+                      <Link href={item.href}>
+                        <a>
+                          <Tippy
+                            content={
+                              <img
+                                src={item.asset.image}
+                                alt=""
+                                className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                              />
+                            }
+                            followCursor={true}
+                            animation="scale"
+                            plugins={[followCursor]}
+                            allowHTML={true}
+                          >
+                            <h4
+                              className={`text-xl sm:text-2xl inline-block hover:text-secondary transition all duration-200 ${
+                                item.id === currentId ? 'text-secondary' : ''
+                              }`}
+                            >
+                              {item.label}
+                            </h4>
+                          </Tippy>
+                        </a>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </Marquee>
+            ))}
+          </div>
+        </Fade>
       </div>
     </Background>
   );
