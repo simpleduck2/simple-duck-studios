@@ -19,7 +19,10 @@ label, label:hover {
   cursor: url('https://derrint.sirv.com/Images/simple-duck-studios/home/cursor.png'), auto !important;	
 }
 
-.bg-black, .bg-black:hover {
+.bg-black, 
+.bg-black:hover, 
+.use-white-cursor, 
+.use-white-cursor:hover {
   cursor: url('https://derrint.sirv.com/Images/simple-duck-studios/home/cursor-inverted.png'), auto !important;	
 }
 
