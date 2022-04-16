@@ -52,7 +52,7 @@ const ContactUs = () => {
 
         <Fade bottom duration={750} delay={500} cascade>
           <div className="w-full sm:w-7/12 lg:w-2/3 lg:px-8">
-            <form action="https://formspree.io/f/mrgjyqgv" method="POST">
+            <form action="https://formspree.io/f/mayvploj" method="POST">
               <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-500 mb-2">
                 Any inquiries?
               </h2>
