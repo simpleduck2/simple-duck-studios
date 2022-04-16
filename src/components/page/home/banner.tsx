@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Tippy from '@tippyjs/react';
-import Image from 'next/image';
+// import Tippy from '@tippyjs/react';
+// import Image from 'next/image';
 import 'tippy.js/animations/scale.css';
 import { CgArrowLongLeft } from 'react-icons/cg';
 import { Fade, Zoom } from 'react-reveal';
-import { followCursor } from 'tippy.js';
+// import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
@@ -102,7 +102,7 @@ const Banner = () => {
           <Fade top duration={750} delay={500} when={state.isReady}>
             <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-center">
               {text?.first}{' '}
-              <Tippy
+              {/* <Tippy
                 content={
                   typeof text?.asset === 'string' ? (
                     <img
@@ -125,23 +125,23 @@ const Banner = () => {
                 animation="scale"
                 plugins={[followCursor]}
                 allowHTML={true}
-              >
-                <span className="z-[1]">
-                  <Fade
-                    left
-                    duration={750}
-                    delay={250}
-                    cascade
-                    when={isTextShown}
+              > */}
+              <span className="z-[1]">
+                <Fade
+                  left
+                  duration={750}
+                  delay={250}
+                  cascade
+                  when={isTextShown}
+                >
+                  <span
+                    className={`text-secondary lg:text-black sm:hover:text-secondary underlined underlined-waved transition-all duration-200`}
                   >
-                    <span
-                      className={`text-secondary lg:text-black sm:hover:text-secondary underlined underlined-waved transition-all duration-200`}
-                    >
-                      {text?.second}
-                    </span>
-                  </Fade>
-                </span>
-              </Tippy>
+                    {text?.second}
+                  </span>
+                </Fade>
+              </span>
+              {/* </Tippy> */}
             </h1>
           </Fade>
           <Fade top duration={750} delay={750} when={state.isReady}>
