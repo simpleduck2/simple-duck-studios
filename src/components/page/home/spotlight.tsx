@@ -59,14 +59,14 @@ const Spotlight = () => {
               {features.map((item, idx) => (
                 <li
                   key={idx}
-                  className="text-lg sm:text-xl lg:text-2xl flex items-start gap-4 mt-4"
+                  className="text-lg sm:text-xl lg:text-2xl flex items-start gap-3 lg:gap-4 mt-4"
                 >
                   <BsFillCheckCircleFill
                     color="#26CD7D"
-                    size={14}
+                    size={16}
                     className="mt-2"
-                  />{' '}
-                  {item}
+                  />
+                  <div className="flex w-full">{item}</div>
                 </li>
               ))}
             </ul>
