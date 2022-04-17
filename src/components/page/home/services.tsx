@@ -32,8 +32,8 @@ const Services = () => {
     <Fade bottom duration={750} delay={250}>
       <Background
         id="services"
-        color="bg-[url(https://derrint.sirv.com/Images/simple-duck-studios/home/bg-stars.jpeg)] bg-cover py-16 lg:py-0 z-[1] use-white-cursor
-        after:content-[''] after:absolute after:z-[2] after:top-0 after:left-0 after:bg-black after:opacity-50 after:w-full after:h-full
+        color="bg-[url(https://derrint.sirv.com/Images/simple-duck-studios/home/bg-star.png)] bg-cover py-16 lg:py-0 z-[1] use-white-cursor
+        after:content-[''] after:absolute after:z-[2] after:top-0 after:left-0 after:bg-black after:opacity-10 after:w-full after:h-full
         "
       >
         <Fade right duration={1250} delay={500} cascade>
