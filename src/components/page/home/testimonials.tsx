@@ -13,7 +13,7 @@ const Testimonials = () => {
       message:
         'You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save. Thank you',
       asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/testimonials/logo-lionstudios.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/testimonials/logo-lion.png',
     },
   ];
   return (
