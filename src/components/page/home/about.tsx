@@ -29,9 +29,9 @@ const About = () => {
 
               <p className="lg:text-lg text-gray-500">
                 We produce high quality video ads, static banners and playables
-                to reach your target audience and your business growth. We
-                design the creative concept with our expertise & knowledge of
-                mobile games & apps marketing.
+                to reach your target audience and help your business grow! We
+                design our creatives with our expertise & knowledge of mobile
+                game & app market.
               </p>
             </div>
           </Fade>
@@ -50,10 +50,10 @@ const About = () => {
                   alt="underline"
                   className="absolute sm:right-16 lg:right-20 lg:pt-1 w-[145px] sm:w-[175px] lg:w-[260px]"
                 />
-                <span className="inline sm:block">
+                {/* <span className="inline sm:block">
                   {' '}
                   and drive their success
-                </span>
+                </span> */}
               </h3>
               <p className="text-lg sm:text-xl lg:text-2xl text-primary">
                 Now, it’s your turn...
