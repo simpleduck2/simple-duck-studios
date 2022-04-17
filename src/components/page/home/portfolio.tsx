@@ -27,7 +27,7 @@ const Portfolio = () => {
       label: 'Lyric Video ',
       href: '/services/lyric-video',
       asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-3.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-7.jpg',
     },
 
     {
@@ -42,7 +42,7 @@ const Portfolio = () => {
       label: 'Video Ads',
       href: '/services/video-ads',
       asset:
-        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-5.png',
+        'https://derrint.sirv.com/Images/simple-duck-studios/home/portfolio-8.jpg',
     },
     {
       id: 6,
