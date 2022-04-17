@@ -32,6 +32,28 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.mp4',
       ],
       gif: Playable,
+      htmls: [
+        {
+          id: 1,
+          file: '/assets/htmls/CandlestickHiddenObject_Playable.html',
+          classNames: 'w-[800px] h-[450px]',
+        },
+        {
+          id: 2,
+          file: '/assets/htmls/Wordle_Playable.html',
+          classNames: 'w-[800px] h-[450px]',
+        },
+        {
+          id: 3,
+          file: '/assets/htmls/BlackjackFreeplayCandlestick_Playable.html',
+          classNames: 'w-[800px] h-[450px]',
+        },
+        {
+          id: 4,
+          file: '/assets/htmls/CoalMiningInc_Playable.html',
+          classNames: 'w-[800px] h-[450px]',
+        },
+      ],
     },
     href: '/services/playables',
     row: 1,

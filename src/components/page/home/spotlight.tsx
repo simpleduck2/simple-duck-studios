@@ -15,9 +15,9 @@ const Spotlight = () => {
   const { showModal } = useActions();
 
   const features = [
-    'Playable & support on all major platform',
-    'Optimize & boots your ad performance',
-    'Drive user engagement',
+    'We support all major networks',
+    'Our Playables are curated to your Campaign Goals',
+    'Playables are key to mobile app industry success',
   ];
 
   const videoUrls = [
@@ -35,18 +35,25 @@ const Spotlight = () => {
         <Fade bottom duration={750} delay={250} cascade>
           <div className="w-full sm:w-7/12">
             <h3 className="text-xl sm:text-2xl lg:text-[32px] font-bold mb-1 lg:mb-3">
-              <span className="block sm:inline">Maximaze your </span>
-              <span>business growth with</span>
+              <span className="block sm:inline">
+                Maximize your conversion rates with
+              </span>
             </h3>
             <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold text-secondary mb-8">
               Playable Ads
             </h1>
             <p className="lg:text-lg text-gray-500">
-              Our speciality, Playable Ads drive revenue and retention through
-              its intractivity. Your potential users can experience your mobile
-              game, app, brand & product through it. By simply tapping &
-              dragging the ad content, this interactive advertisement format
-              lets users experience core app functionality.
+              Playable Ads are our specialty, and time & time again we have
+              partnered with mobile app compainies to achieve successful ad
+              results.
+              <br />
+              <br />
+              Playables allow users to experience your vision through an
+              interactive experience.
+              <br />
+              <br />
+              This interactive advertisement format give users to opportunity to
+              try core app features & functionality.
             </p>
             <ul className="mt-10">
               {features.map((item, idx) => (

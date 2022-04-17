@@ -30,9 +30,14 @@ const Services = () => {
 
   return (
     <Fade bottom duration={750} delay={250}>
-      <Background id="services" color="bg-black py-16 lg:py-0">
+      <Background
+        id="services"
+        color="bg-[url(https://derrint.sirv.com/Images/simple-duck-studios/home/bg-stars.jpeg)] bg-cover py-16 lg:py-0 z-[1] use-white-cursor
+        after:content-[''] after:absolute after:z-[2] after:top-0 after:left-0 after:bg-black after:opacity-50 after:w-full after:h-full
+        "
+      >
         <Fade right duration={1250} delay={500} cascade>
-          <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white">
+          <div className="relative lg:min-h-[720px] flex flex-col justify-center items-center text-center text-white z-[3]">
             <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-8">
               Our Services
             </h1>
