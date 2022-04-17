@@ -270,12 +270,15 @@ const Services = () => {
                   {shouldUseImage ? (
                     <img src={currentService?.asset?.image} alt="Muted Video" />
                   ) : (
-                    <div className="grid grid-cols-2 gap-5 lg:gap-10">
+                    <div className="grid sm:grid-cols-2 gap-5 lg:gap-10">
                       {currentService?.asset?.videos.map(
                         (video: any, idx: number) => (
                           <div
                             key={idx}
-                            className="flex justify-center"
+                            className="flex justify-center relative
+                            after:content-[''] after:absolute after:z-[1] after:top-0 after:left-0 after:hover:bg-black after:opacity-50 after:w-full after:h-full after:transition-all after:duration-300 after:rounded-3xl
+                            group
+                            "
                             ref={videoParentRef}
                             onClick={() => {
                               showModal('playable-demo');
@@ -297,7 +300,11 @@ const Services = () => {
                             class="rounded-3xl max-h-[720px]"
                           >
                           <source src="${video}" type="video/mp4" />
-                          </video>`,
+                          </video>
+                          <div class="absolute z-[2] top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] invisible group-hover:visible text-white font-bold text-2xl lg:text-3xl">
+                            Click to Play
+                          </div>
+                          `,
                             }}
                           />
                         )
