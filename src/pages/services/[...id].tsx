@@ -6,14 +6,19 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { isSafari, isIOS } from 'react-device-detect';
 import Marquee from 'react-fast-marquee';
+import Iframe from 'react-iframe';
 import { Fade } from 'react-reveal';
 import { followCursor } from 'tippy.js';
 
 import { Background } from '@components/background';
 import { Section } from '@components/layout';
+import { Modal } from '@components/modal';
 import { services } from '@data/index';
+import { useActions } from '@overmind/index';
 
 const Services = () => {
+  const { showModal } = useActions();
+
   const router = useRouter();
   const currentId = router?.query?.id?.[0];
   const [currentService, setCurrentService] = React.useState(null as any);
@@ -85,6 +90,7 @@ const Services = () => {
 
   const [state, setState] = React.useState({
     isReady: false,
+    playable: '',
   });
 
   React.useEffect(() => {
@@ -271,6 +277,15 @@ const Services = () => {
                             key={idx}
                             className="flex justify-center"
                             ref={videoParentRef}
+                            onClick={() => {
+                              showModal('playable-demo');
+
+                              const playable =
+                                currentService?.asset?.htmls.find(
+                                  (x: any) => x.id === idx + 1
+                                ).file;
+                              setState({ ...state, playable });
+                            }}
                             dangerouslySetInnerHTML={{
                               __html: `
                           <video
@@ -348,6 +363,19 @@ const Services = () => {
           ))}
         </div>
       </div>
+
+      <Modal name="playable-demo" closeButton={{ color: 'white' }}>
+        <div className="text-left bg-white shadow-xl rounded-3xl">
+          <>
+            <Iframe
+              url={state.playable}
+              id="myId"
+              className="w-[280px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[158px] sm:h-[225px] md:h-[338px] lg:h-[450px] rounded-2xl"
+              position="relative"
+            />
+          </>
+        </div>
+      </Modal>
     </Background>
   );
 };
