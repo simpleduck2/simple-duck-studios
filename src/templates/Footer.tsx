@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 import { Background } from '@components/background/Background';
 import { Section } from '@components/layout/Section';
-import LogoBW from '@images/logos/logo-sds-bw.svg';
 
 const Footer = () => {
   const menus = [
@@ -35,7 +33,12 @@ const Footer = () => {
       <Section yPadding="py-8" isFooter>
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full lg:w-6/12 flex justify-between lg:justify-start items-center gap-10">
-            <Image src={LogoBW} alt="" height={48} width={190} />
+            {/* <Image src={LogoBW} alt="" height={48} width={190} /> */}
+            <img
+              src="/assets/images/logos/logo-sds-bw.svg"
+              alt=""
+              className="h-[48px] aspect-auto"
+            />
             <p className="text-sm uppercase text-right">
               Copyright © 2022 Simpleduckstudios
             </p>

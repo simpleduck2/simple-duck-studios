@@ -1,6 +1,5 @@
 import Tippy from '@tippyjs/react';
 import 'tippy.js/animations/scale.css';
-import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import { Fade } from 'react-reveal';
 import { followCursor } from 'tippy.js';
@@ -49,19 +48,19 @@ const Services = () => {
                     <div key={item.id} className="mx-8">
                       <Tippy
                         content={
-                          // <img
-                          //   src={item.asset.image}
-                          //   alt=""
-                          //   className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                          // />
-                          <Image
-                            src={item?.asset.gif}
+                          <img
+                            src={item.asset.gif}
                             alt=""
-                            className="static w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                            objectFit="cover"
-                            width={200}
-                            height={200}
+                            className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
                           />
+                          // <Image
+                          //   src={item?.asset.gif}
+                          //   alt=""
+                          //   className="static w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                          //   objectFit="cover"
+                          //   width={200}
+                          //   height={200}
+                          // />
                         }
                         followCursor={true}
                         animation="scale"

@@ -8,8 +8,8 @@
 Run the following command on your local environment:
 
 ```
-git clone --depth=1 https://github.com/derrint/simple-duck-studios.git block-explorer-web
-cd block-explorer-web
+git clone --depth=1 https://github.com/derrint/simple-duck-studios.git simple-duck-web
+cd simple-duck-web
 yarn install
 ```
 

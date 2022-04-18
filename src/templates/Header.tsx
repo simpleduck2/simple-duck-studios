@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Fade } from 'react-reveal';
 
@@ -9,7 +8,6 @@ import { DropdownMenu } from '@components/dropdown';
 import { Section } from '@components/layout';
 import { NavbarTwoColumns } from '@components/navigation/NavbarTwoColumns';
 import { menus } from '@data/index';
-import Logo from '@images/logos/logo-sds.svg';
 
 const Header = () => {
   const [state, setState] = React.useState({
@@ -44,7 +42,15 @@ const Header = () => {
     >
       <Fade top duration={750} delay={0} when={state.isReady}>
         <Section yPadding="py-6" className="relative" isHeader>
-          <NavbarTwoColumns logo={<Image src={Logo} alt="" />}>
+          <NavbarTwoColumns
+            logo={
+              <img
+                src="/assets/images/logos/logo-sds.svg"
+                alt=""
+                className="h-10 md:h-12 lg:h-16 aspect-auto"
+              />
+            }
+          >
             {menus.map(
               ({
                 id,

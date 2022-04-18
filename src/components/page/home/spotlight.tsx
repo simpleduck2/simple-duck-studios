@@ -1,14 +1,10 @@
 import React from 'react';
 
-import Image from 'next/image';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { Fade } from 'react-reveal';
 
 import { Section } from '@components/layout';
 import { Modal } from '@components/modal';
-import Playable1 from '@images/services/playable-1.gif';
-import Playable2 from '@images/services/playable-2.gif';
-import Playable4 from '@images/services/playable-4.gif';
 import { useActions } from '@overmind/index';
 
 const Spotlight = () => {
@@ -25,6 +21,13 @@ const Spotlight = () => {
     'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.mp4',
     'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.mp4',
     'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.mp4',
+  ];
+
+  const gifs = [
+    '/assets/images/services/playable-1.gif',
+    '/assets/images/services/playable-2.gif',
+    '/assets/images/services/playable-3.gif',
+    '/assets/images/services/playable-4.gif',
   ];
 
   const [videoUrl, setVideoUrl] = React.useState(videoUrls[0]);
@@ -87,16 +90,16 @@ const Spotlight = () => {
         <Fade bottom duration={750} delay={500} cascade>
           <div className="w-full sm:w-5/12 flex flex-col gap-5 lg:gap-10">
             <div>
-              {/* <img
-                src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-1.png"
+              <img
+                src={gifs[0]}
                 className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                 alt=""
                 onClick={() => {
                   setVideoUrl(videoUrls[0]);
                   showModal('video-player');
                 }}
-              /> */}
-              <Image
+              />
+              {/* <Image
                 src={Playable1}
                 alt=""
                 className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
@@ -104,20 +107,20 @@ const Spotlight = () => {
                   setVideoUrl(videoUrls[0]);
                   showModal('video-player');
                 }}
-              />
+              /> */}
             </div>
             <div className="flex gap-5 lg:gap-10">
               <div className="w-1/2">
-                {/* <img
-                  src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.png"
+                <img
+                  src={gifs[3]}
                   className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                   alt=""
                   onClick={() => {
                     setVideoUrl(videoUrls[3]);
                     showModal('video-player');
                   }}
-                /> */}
-                <Image
+                />
+                {/* <Image
                   src={Playable4}
                   alt=""
                   className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
@@ -125,19 +128,19 @@ const Spotlight = () => {
                     setVideoUrl(videoUrls[3]);
                     showModal('video-player');
                   }}
-                />
+                /> */}
               </div>
               <div className="w-1/2">
-                {/* <img
-                  src="https://derrint.sirv.com/Images/simple-duck-studios/services/playable-2.png"
+                <img
+                  src={gifs[1]}
                   className="shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
                   alt=""
                   onClick={() => {
                     setVideoUrl(videoUrls[1]);
                     showModal('video-player');
                   }}
-                /> */}
-                <Image
+                />
+                {/* <Image
                   src={Playable2}
                   alt=""
                   className="transition-all duration-300 rounded-2xl lg:rounded-3xl w-full"
@@ -145,7 +148,7 @@ const Spotlight = () => {
                     setVideoUrl(videoUrls[1]);
                     showModal('video-player');
                   }}
-                />
+                /> */}
               </div>
             </div>
           </div>
