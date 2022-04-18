@@ -3,7 +3,7 @@ import Animations from '@images/services/animations.gif';
 import AppVideoAds from '@images/services/app-video-ads.gif';
 import BrandGuidelines from '@images/services/brand-guidelines.gif';
 import LiveVideos from '@images/services/live-videos.gif';
-import LyricVideo from '@images/services/lyrics-video.gif';
+import LyricVideo from '@images/services/lyric-video.gif';
 import Playable from '@images/services/playable.gif';
 import PromoGifs from '@images/services/promo-gifs.gif';
 import RapAds from '@images/services/rap-ads.gif';
@@ -31,7 +31,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-3.mp4',
         'https://derrint.sirv.com/Images/simple-duck-studios/services/playable-4.mp4',
       ],
-      gif: Playable,
+      gifObj: Playable,
+      gif: '/assets/images/services/playable.gif',
       htmls: [
         {
           id: 1,
@@ -68,7 +69,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.png',
       video:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/video-ads.mp4',
-      gif: VideoAds,
+      gifObj: VideoAds,
+      gif: '/assets/images/services/video-ads.gif',
     },
     href: '/services/video-ads',
     row: 2,
@@ -87,7 +89,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-6.jpg',
         'https://derrint.sirv.com/Images/simple-duck-studios/services/storyboarding-7.jpg',
       ],
-      gif: Storyboarding,
+      gifObj: Storyboarding,
+      gif: '/assets/images/services/storyboarding.gif',
     },
     href: '/services/storyboarding',
     row: 3,
@@ -102,7 +105,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/app-video-ads.png',
       video:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/app-video-ads.mp4',
-      gif: AppVideoAds,
+      gifObj: AppVideoAds,
+      gif: '/assets/images/services/app-video-ads.gif',
     },
     href: '/services/app-video-ads',
     row: 1,
@@ -117,7 +121,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/3d-videos.png',
       video:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/3d-videos.mp4',
-      gif: ThreeDVideos,
+      gifObj: ThreeDVideos,
+      gif: '/assets/images/services/3d-videos.gif',
     },
     href: '/services/3d-videos',
     row: 2,
@@ -130,7 +135,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/brand-guidelines.svg',
       image:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/brand-guidelines.png',
-      gif: BrandGuidelines,
+      gifObj: BrandGuidelines,
+      gif: '/assets/images/services/brand-guidelines.gif',
     },
     href: '/services/brand-guidelines',
     row: 3,
@@ -145,7 +151,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/lyric-video.png',
       video:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/lyric-video.mp4',
-      gif: LyricVideo,
+      gifObj: LyricVideo,
+      gif: '/assets/images/services/lyric-video.gif',
     },
     href: '/services/lyric-video',
     row: 1,
@@ -162,7 +169,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/live-videos-1.mp4',
         'https://derrint.sirv.com/Images/simple-duck-studios/services/live-videos-2.mp4',
       ],
-      gif: LiveVideos,
+      gifObj: LiveVideos,
+      gif: '/assets/images/services/live-videos.gif',
     },
     href: '/services/live-videos',
     row: 2,
@@ -175,7 +183,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/illustrations/promo-gifs.svg',
       image:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/promo-gifs.gif',
-      gif: PromoGifs,
+      gifObj: PromoGifs,
+      gif: '/assets/images/services/promo-gifs.gif',
     },
     href: '/services/promo-gifs',
     row: 3,
@@ -193,7 +202,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/animations-2.mp4',
         'https://derrint.sirv.com/Images/simple-duck-studios/services/animations-3.mp4',
       ],
-      gif: Animations,
+      gifObj: Animations,
+      gif: '/assets/images/services/animations.gif',
     },
     href: '/services/animations',
     row: 2,
@@ -208,7 +218,8 @@ const services = [
         'https://derrint.sirv.com/Images/simple-duck-studios/services/rap-ads.png',
       video:
         'https://derrint.sirv.com/Images/simple-duck-studios/services/rap-ads.mp4',
-      gif: RapAds,
+      gifObj: RapAds,
+      gif: '/assets/images/services/rap-ads.gif',
     },
     href: '/services/rap-ads',
     row: 3,
