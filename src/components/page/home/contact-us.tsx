@@ -16,7 +16,7 @@ const ContactUs = () => {
   const [selected, setSelected] = useState(null as any);
 
   return (
-    <Section id="contact" yPadding="py-10 sm:py-20">
+    <Section id="contact" yPadding="py-10 pt-6">
       <div className="relative min-h-[720px] flex flex-col sm:flex-row gap-10 sm:gap-0lg:gap-20">
         <Fade bottom duration={750} delay={250} cascade>
           <div className="w-full sm:w-5/12 lg:w-1/3 lg:px-8">
