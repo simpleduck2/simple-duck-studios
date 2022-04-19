@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import { Fade } from 'react-reveal';
 
 import { Background } from '@components/background';
@@ -9,9 +10,11 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      sender: 'Genna Gardeman, Sr. Product Marketing Manager',
+      sender: 'Haley Yang, Manager & Product Marketing',
+      company: 'Lion Studios',
+      senderUrl: 'https://www.linkedin.com/in/haley-yang/',
       message:
-        'You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change and click save. Thank you',
+        'Simple Duck satisfies our business needs for high quality creatives at a fast pace! The team is always open to adjust to our changing needs even post delivery. They are a great partner to work with!',
       asset:
         'https://derrint.sirv.com/Images/simple-duck-studios/testimonials/logo-lion.png',
     },
@@ -54,7 +57,13 @@ const Testimonials = () => {
                       className="h-12 lg:h-16 aspect-auto max-w-none"
                     />
                     <p className="lg:text-lg mt-8">{item.message}</p>
-                    <h4 className="text-gray-500 mt-8">{item.sender}</h4>
+                    <h4 className="text-gray-500 hover:text-secondary mt-8">
+                      <Link href={item.senderUrl} passHref>
+                        <a target="_blank">
+                          {item.sender} &#8212; {item.company}
+                        </a>
+                      </Link>
+                    </h4>
                   </div>
                 ))}
               </div>
