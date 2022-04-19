@@ -36,7 +36,7 @@ const services = [
       htmls: [
         {
           id: 1,
-          file: '/assets/htmls/CandlestickHiddenObject_Playable.html',
+          file: '/assets/htmls/CandlestickHiddenObject_Playable_1_1.html',
           classNames: 'w-[800px] h-[450px]',
         },
         {
@@ -46,7 +46,7 @@ const services = [
         },
         {
           id: 3,
-          file: '/assets/htmls/BlackjackFreeplayCandlestick_Playable.html',
+          file: '/assets/htmls/BlackjackFreeplayCandlestick_Playable_1_1.html',
           classNames: 'w-[800px] h-[450px]',
         },
         {
