@@ -332,6 +332,9 @@ const Services = () => {
                               src={item.asset.gif}
                               alt=""
                               className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                              onLoad={() => {
+                                console.log('udah keload');
+                              }}
                             />
                             // <Image
                             //   src={item?.asset.gif}
