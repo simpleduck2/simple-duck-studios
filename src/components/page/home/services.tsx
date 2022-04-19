@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Tippy from '@tippyjs/react';
 import 'tippy.js/animations/scale.css';
 import Marquee from 'react-fast-marquee';
@@ -27,6 +29,8 @@ const Services = () => {
     },
   ];
 
+  const [loadedGifs, setLoadedGifs] = React.useState([] as any);
+
   return (
     <Fade bottom duration={750} delay={250}>
       <Background
@@ -48,11 +52,42 @@ const Services = () => {
                     <div key={item.id} className="mx-8">
                       <Tippy
                         content={
-                          <img
-                            src={item.asset.gif}
-                            alt=""
-                            className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
-                          />
+                          <>
+                            <img
+                              src={item.asset.gif}
+                              alt=""
+                              className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
+                              onLoad={() => {
+                                setLoadedGifs((oldArray: any) => [
+                                  ...oldArray,
+                                  item.asset.gif,
+                                ]);
+                              }}
+                            />
+                            <div
+                              className={`absolute top-0 left-0 w-40 lg:w-60 h-40 lg:h-60 bg-black bg-opacity-40 flex items-center justify-center rounded-full 
+                              ${
+                                loadedGifs.includes(item.asset.gif)
+                                  ? 'hidden'
+                                  : ''
+                              }`}
+                            >
+                              <div className="lds-spinner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                              </div>
+                            </div>
+                          </>
                           // <Image
                           //   src={item?.asset.gif}
                           //   alt=""
