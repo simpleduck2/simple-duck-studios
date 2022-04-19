@@ -98,6 +98,8 @@ const Services = () => {
     return () => {};
   }, []);
 
+  const [loadedGifs, setLoadedGifs] = React.useState([] as any);
+
   return (
     <Background
       id="services"
@@ -109,6 +111,11 @@ const Services = () => {
           <h1 className="text-3xl sm:text-5xl lg:text-[64px] font-bold mb-4">
             Our Services
           </h1>
+          <ul>
+            {loadedGifs.map((gif: string, idx: number) => (
+              <li key={idx}>{gif}</li>
+            ))}
+          </ul>
         </Fade>
 
         <Fade bottom duration={750} delay={500} when={state.isReady}>
@@ -334,6 +341,10 @@ const Services = () => {
                               className="w-40 lg:w-60 object-cover aspect-square max-w-none rounded-full transition all duration-200"
                               onLoad={() => {
                                 console.log('udah keload');
+                                setLoadedGifs((oldArray: any) => [
+                                  ...oldArray,
+                                  item.asset.gif,
+                                ]);
                               }}
                             />
                             // <Image
