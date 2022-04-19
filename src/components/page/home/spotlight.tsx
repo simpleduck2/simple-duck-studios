@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import { BsFillCheckCircleFill } from 'react-icons/bs';
 import { Fade } from 'react-reveal';
 
@@ -74,15 +75,17 @@ const Spotlight = () => {
               ))}
             </ul>
             <div className="flex mt-10 justify-center sm:justify-start">
-              <button
-                onClick={() => {
-                  setVideoUrl(videoUrls[0]);
-                  showModal('video-player');
-                }}
-                className="lg:text-lg bg-primary px-6 py-4 rounded-full"
-              >
-                View Portfolio
-              </button>
+              <Link href="/services/playables" passHref>
+                <button
+                  // onClick={() => {
+                  //   setVideoUrl(videoUrls[0]);
+                  //   showModal('video-player');
+                  // }}
+                  className="lg:text-lg bg-primary px-6 py-4 rounded-full"
+                >
+                  View Portfolio
+                </button>
+              </Link>
             </div>
           </div>
         </Fade>
